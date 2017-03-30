@@ -129,11 +129,13 @@ gulp.task('js', () => {
         .pipe(gulp.dest(`./app/build/js/`))
         .pipe(browserSync.reload({
             stream: true
+        })).pipe(notify({
+            message: 'Finished minifying app JavaScript'
         }));
 });
 
 gulp.task('sass', () => {
-    gulp.src(`./app/source/sass/app/style.scss`)
+    gulp.src(`./app/source/sass/app/*.scss`)
         .pipe(sass())
         // .pipe(minify())
         .pipe(gulp.dest(`./app/build/css/`))
@@ -141,6 +143,18 @@ gulp.task('sass', () => {
             stream: true
         }));
 });
+
+gulp.task('img', () =>
+    gulp.src(`./app/source/img/*`)
+    .pipe(imagemin([imagemin.gifsicle(), imagemin.jpegtran(), imagemin.optipng(), imagemin.svgo()]))
+    .pipe(gulp.dest(`./app/build/img`))
+);
+
+
+gulp.task('watch', () => {
+    gulp.watch([`./app/source/sass/**/*.scss`], ['sass']);
+    gulp.watch([`./app/source/js/**/*.js`], ['js']);
+})
 
 gulp.task('serve', () => {
     browserSync.init({
@@ -150,8 +164,4 @@ gulp.task('serve', () => {
     });
 });
 
-gulp.task('watch', () => {
-    gulp.watch([`./app/source/sass/**/*.scss`], ['sass']);
-})
-
-gulp.task('default', ['vendor-js', 'js', 'sass', 'watch', 'serve']);
+gulp.task('default', ['vendor-js', 'js', 'sass', 'img', 'watch', 'serve']);

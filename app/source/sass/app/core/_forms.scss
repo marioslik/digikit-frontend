@@ -1,0 +1,15 @@
+#feedbackForm input, #feedbackForm textarea {
+  border: 0px !important;
+}
+
+#feedbackForm textarea {
+  height: 245px;
+  max-width: 845px;
+  margin: 0 auto;
+}
+
+button.submit {
+    display: inline-block;
+    text-align: left;
+    margin: 45px 0 30px 0;
+}

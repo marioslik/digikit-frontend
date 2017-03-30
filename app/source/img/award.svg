@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="85px" height="85px" viewBox="0 0 85 85" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>ICON/AWARD</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="SYMBOLS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="ICON/AWARD" stroke-width="2">
+            <g id="AWARD">
+                <polyline id="Stroke-803" stroke="#3C3C3D" points="60.8272966 66.5357143 8.68936552 66.5357143 8.68936552 26.0357143 69.5169517 26.0357143 69.5169517 37.6071429"></polyline>
+                <path d="M14.4827586,17.3571429 L36.2908966,3.574125" id="Stroke-1282" stroke="#DDDBDB"></path>
+                <path d="M63.7241379,17.3571429 L41.9333793,3.50614286" id="Stroke-1283" stroke="#DDDBDB"></path>
+                <polyline id="Stroke-1284" stroke="#3C3C3D" points="60.6465517 75.2142857 0 75.2142857 0 17.3571429 78.2068966 17.3571429 78.2068966 40.5"></polyline>
+                <path d="M36.2068966,2.89285714 C36.2068966,1.29455357 37.5031034,0 39.1034483,0 C40.7037931,0 42,1.29455357 42,2.89285714 C42,4.49116071 40.7037931,5.78571429 39.1034483,5.78571429 C37.5031034,5.78571429 36.2068966,4.49116071 36.2068966,2.89285714 L36.2068966,2.89285714 Z" id="Stroke-1285" stroke="#DDDBDB"></path>
+                <polyline id="Stroke-1286" stroke="#FCB718" points="78.2068966 63.522225 78.2068966 80.9994214 69.5172414 75.2137071 60.8275862 80.9994214 60.8275862 63.522225"></polyline>
+                <path d="M55.0344828,52.0714286 C55.0344828,44.0828036 61.5184138,37.6071429 69.5172414,37.6071429 C77.516069,37.6071429 84,44.0828036 84,52.0714286 C84,60.0600536 77.516069,66.5357143 69.5172414,66.5357143 C61.5184138,66.5357143 55.0344828,60.0600536 55.0344828,52.0714286 L55.0344828,52.0714286 Z" id="Stroke-1287" stroke="#FCB718"></path>
+                <path d="M20.2758621,40.5 L49.2413793,40.5" id="Stroke-1288" stroke="#3C3C3D"></path>
+                <path d="M20.2758621,52.0714286 L37.6551724,52.0714286" id="Stroke-1289" stroke="#3C3C3D"></path>
+            </g>
+        </g>
+    </g>
+</svg>

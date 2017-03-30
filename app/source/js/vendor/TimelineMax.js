@@ -6,7 +6,7 @@
  * @license Copyright (c) 2008-2017, GreenSock. All rights reserved.
  * This work is subject to the terms at http://greensock.com/standard-license or for
  * Club GreenSock members, the software agreement that was issued with your membership.
- * 
+ *
  * @author: Jack Doyle, jack@greensock.com
  */
 var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(global) !== "undefined") ? global : this || window; //helps ensure compatibility with AMD/RequireJS and CommonJS/Node
@@ -15,7 +15,7 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 	"use strict";
 
 	_gsScope._gsDefine("TimelineMax", ["TimelineLite","TweenLite","easing.Ease"], function(TimelineLite, TweenLite, Ease) {
-		
+
 		var TimelineMax = function(vars) {
 				TimelineLite.call(this, vars);
 				this._repeat = this.vars.repeat || 0;
@@ -31,11 +31,11 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 			_globals = _gsScope._gsDefine.globals,
 			_easeNone = new Ease(null, null, 1, 0),
 			p = TimelineMax.prototype = new TimelineLite();
-			
+
 		p.constructor = TimelineMax;
 		p.kill()._gc = false;
 		TimelineMax.version = "1.19.1";
-		
+
 		p.invalidate = function() {
 			this._yoyo = (this.vars.yoyo === true);
 			this._repeat = this.vars.repeat || 0;
@@ -43,11 +43,11 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 			this._uncache(true);
 			return TimelineLite.prototype.invalidate.call(this);
 		};
-		
+
 		p.addCallback = function(callback, position, params, scope) {
 			return this.add( TweenLite.delayedCall(0, callback, params, scope), position);
 		};
-		
+
 		p.removeCallback = function(callback, position) {
 			if (callback) {
 				if (position == null) {
@@ -69,7 +69,7 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 		p.removePause = function(position) {
 			return this.removeCallback(TimelineLite._internals.pauseCallback, position);
 		};
-		
+
 		p.tweenTo = function(position, vars) {
 			vars = vars || {};
 			var copy = {ease:_easeNone, useFrames:this.usesFrames(), immediateRender:false},
@@ -92,7 +92,7 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 			};
 			return t;
 		};
-		
+
 		p.tweenFromTo = function(fromPosition, toPosition, vars) {
 			vars = vars || {};
 			fromPosition = this._parseTimeOrLabel(fromPosition);
@@ -101,20 +101,20 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 			var t = this.tweenTo(toPosition, vars);
 			return t.duration((Math.abs( t.vars.time - fromPosition) / this._timeScale) || 0.001);
 		};
-		
+
 		p.render = function(time, suppressEvents, force) {
 			if (this._gc) {
 				this._enabled(true, false);
 			}
 			var totalDur = (!this._dirty) ? this._totalDuration : this.totalDuration(),
 				dur = this._duration,
-				prevTime = this._time, 
-				prevTotalTime = this._totalTime, 
-				prevStart = this._startTime, 
-				prevTimeScale = this._timeScale, 
+				prevTime = this._time,
+				prevTotalTime = this._totalTime,
+				prevStart = this._startTime,
+				prevTimeScale = this._timeScale,
 				prevRawPrevTime = this._rawPrevTime,
-				prevPaused = this._paused, 
-				prevCycle = this._cycle, 
+				prevPaused = this._paused,
+				prevCycle = this._cycle,
 				tween, isComplete, next, callback, internalForce, cycleDuration, pauseTween, curTime;
 			if (time >= totalDur - 0.0000001 && time >= 0) { //to work around occasional floating point math artifacts.
 				if (!this._locked) {
@@ -139,7 +139,7 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 					this._time = dur;
 					time = dur + 0.0001; //to avoid occasional floating point rounding errors - sometimes child tweens/timelines were not being fully completed (their progress might be 0.999999999999998 instead of 1 because when _time - tween._startTime is performed, floating point errors would return a value that was SLIGHTLY off). Try (999999999999.7 - 999999999999) * 1 = 0.699951171875 instead of 0.7. We cannot do less then 0.0001 because the same issue can occur when the duration is extremely large like 999999999999 in which case adding 0.00000001, for example, causes it to act like nothing was added.
 				}
-				
+
 			} else if (time < 0.0000001) { //to work around occasional floating point math artifacts, round super small values to 0.
 				if (!this._locked) {
 					this._totalTime = this._cycle = 0;
@@ -174,7 +174,7 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 						internalForce = true;
 					}
 				}
-				
+
 			} else {
 				if (dur === 0 && prevRawPrevTime < 0) { //without this, zero-duration repeating timelines (like with a simple callback nested at the very beginning and a repeatDelay) wouldn't render the first time through.
 					internalForce = true;
@@ -229,15 +229,15 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 				}
 
 			}
-			
+
 			if (this._cycle !== prevCycle) if (!this._locked) {
 				/*
-				make sure children at the end/beginning of the timeline are rendered properly. If, for example, 
+				make sure children at the end/beginning of the timeline are rendered properly. If, for example,
 				a 3-second long timeline rendered at 2.9 seconds previously, and now renders at 3.2 seconds (which
 				would get transated to 2.8 seconds if the timeline yoyos or 0.2 seconds if it just repeats), there
-				could be a callback or a short tween that's at 2.95 or 3 seconds in which wouldn't render. So 
+				could be a callback or a short tween that's at 2.95 or 3 seconds in which wouldn't render. So
 				we need to push the timeline to the end (and/or beginning depending on its yoyo value). Also we must
-				ensure that zero-duration tweens at the very beginning or end of the TimelineMax work. 
+				ensure that zero-duration tweens at the very beginning or end of the TimelineMax work.
 				*/
 				var backwards = (this._yoyo && (prevCycle & 1) !== 0),
 					wrap = (backwards === (this._yoyo && (this._cycle & 1) !== 0)),
@@ -245,7 +245,7 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 					recCycle = this._cycle,
 					recRawPrevTime = this._rawPrevTime,
 					recTime = this._time;
-				
+
 				this._totalTime = prevCycle * dur;
 				if (this._cycle < prevCycle) {
 					backwards = !backwards;
@@ -253,7 +253,7 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 					this._totalTime += dur;
 				}
 				this._time = prevTime; //temporarily revert _time so that render() renders the children in the correct order. Without this, tweens won't rewind correctly. We could arhictect things in a "cleaner" way by splitting out the rendering queue into a separate method but for performance reasons, we kept it all inside this method.
-				
+
 				this._rawPrevTime = (dur === 0) ? prevRawPrevTime - 0.0001 : prevRawPrevTime;
 				this._cycle = prevCycle;
 				this._locked = true; //prevents changes to totalTime and skips repeat/yoyo behavior when we recursively call render()
@@ -297,7 +297,7 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 			if (!this._active) if (!this._paused && this._totalTime !== prevTotalTime && time > 0) {
 				this._active = true;  //so that if the user renders the timeline (as opposed to the parent timeline rendering it), it is forced to re-render and align it with the proper time/frame on the next rendering cycle. Maybe the timeline already finished but the user manually re-renders it as halfway done, for example.
 			}
-			
+
 			if (prevTotalTime === 0) if (this.vars.onStart) if (this._totalTime !== 0 || !this._totalDuration) if (!suppressEvents) {
 				this._callback("onStart");
 			}
@@ -346,7 +346,7 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 					tween = next;
 				}
 			}
-			
+
 			if (this._onUpdate) if (!suppressEvents) {
 				if (_lazyTweens.length) { //in case rendering caused any tweens to lazy-init, we should render them because typically when a timeline finishes, users expect things to have rendered fully. Imagine an onUpdate on a timeline that reports/checks tweened values.
 					_lazyRender();
@@ -368,7 +368,7 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 				}
 			}
 		};
-		
+
 		p.getActive = function(nested, tweens, timelines) {
 			if (nested == null) {
 				nested = true;
@@ -379,9 +379,9 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 			if (timelines == null) {
 				timelines = false;
 			}
-			var a = [], 
-				all = this.getChildren(nested, tweens, timelines), 
-				cnt = 0, 
+			var a = [],
+				all = this.getChildren(nested, tweens, timelines),
+				cnt = 0,
 				l = all.length,
 				i, tween;
 			for (i = 0; i < l; i++) {
@@ -392,8 +392,8 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 			}
 			return a;
 		};
-		
-		
+
+
 		p.getLabelAfter = function(time) {
 			if (!time) if (time !== 0) { //faster than isNan()
 				time = this._time;
@@ -408,7 +408,7 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 			}
 			return null;
 		};
-		
+
 		p.getLabelBefore = function(time) {
 			if (time == null) {
 				time = this._time;
@@ -422,7 +422,7 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 			}
 			return null;
 		};
-		
+
 		p.getLabelsArray = function() {
 			var a = [],
 				cnt = 0,
@@ -441,13 +441,13 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 			return TimelineLite.prototype.invalidate.call(this);
 		};
 
-		
+
 //---- GETTERS / SETTERS -------------------------------------------------------------------------------------------------------
-		
+
 		p.progress = function(value, suppressEvents) {
 			return (!arguments.length) ? this._time / this.duration() : this.totalTime( this.duration() * ((this._yoyo && (this._cycle & 1) !== 0) ? 1 - value : value) + (this._cycle * (this._duration + this._repeatDelay)), suppressEvents);
 		};
-		
+
 		p.totalProgress = function(value, suppressEvents) {
 			return (!arguments.length) ? this._totalTime / this.totalDuration() : this.totalTime( this.totalDuration() * value, suppressEvents);
 		};
@@ -463,7 +463,7 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 			}
 			return (this._repeat === -1 || !value) ? this : this.timeScale( this.totalDuration() / value );
 		};
-		
+
 		p.time = function(value, suppressEvents) {
 			if (!arguments.length) {
 				return this._time;
@@ -481,7 +481,7 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 			}
 			return this.totalTime(value, suppressEvents);
 		};
-		
+
 		p.repeat = function(value) {
 			if (!arguments.length) {
 				return this._repeat;
@@ -489,7 +489,7 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 			this._repeat = value;
 			return this._uncache(true);
 		};
-		
+
 		p.repeatDelay = function(value) {
 			if (!arguments.length) {
 				return this._repeatDelay;
@@ -497,7 +497,7 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 			this._repeatDelay = value;
 			return this._uncache(true);
 		};
-		
+
 		p.yoyo = function(value) {
 			if (!arguments.length) {
 				return this._yoyo;
@@ -505,16 +505,16 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 			this._yoyo = value;
 			return this;
 		};
-		
+
 		p.currentLabel = function(value) {
 			if (!arguments.length) {
 				return this.getLabelBefore(this._time + 0.00000001);
 			}
 			return this.seek(value, true);
 		};
-		
+
 		return TimelineMax;
-		
+
 	}, true);
 
 
