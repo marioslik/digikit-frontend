@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="85px" height="85px" viewBox="0 0 85 85" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>ICON/Window</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="SYMBOLS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ICON/Window">
+            <path d="M23.952381,82 L61.0952381,82" id="Stroke-3417-Copy" stroke="#828080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M20.1428571,46 L65.8571429,46" id="Stroke-3253" stroke="#828080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M43,10.6190476 L43,82.047619" id="Stroke-3269" stroke="#828080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M3,10.6190476 L3,82.047619 L24.2008282,82.047619 C24.2008282,73.6150794 15.3759834,60.3558201 8.30020704,55.5925926 C19.6744513,50.755291 33.4761905,30.4603175 33.4761905,10.6190476" id="Stroke-3355-Copy" stroke="#444444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M83,10.6190476 L83,82.047619 L61.7991718,82.047619 C61.7991718,73.6150794 70.6240166,60.3558201 77.699793,55.5925926 C66.3255487,50.755291 52.5238095,30.5701058 52.5238095,10.6190476" id="Stroke-3356-Copy" stroke="#444444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <polygon id="Stroke-3416-Copy" stroke="#444444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="83 10.6190476 3 10.6190476 3 3 83 3"></polygon>
+            <g id="Crack-2" transform="translate(23.000000, 51.571429)" stroke="#FFD070" stroke-linecap="square">
+                <path d="M8.4981685,12.014652 L8.4981685,0.293040293" id="Line"></path>
+                <path d="M8.4981685,12.014652 L12.6007326,3.22344322" id="Line"></path>
+                <path d="M7.91208791,10.8424908 L0.293040293,6.15384615" id="Line"></path>
+                <path d="M7.32600733,12.014652 L0.293040293,15.5311355" id="Line"></path>
+                <path d="M8.4981685,12.014652 L5.56776557,22.5641026" id="Line"></path>
+                <path d="M9.08424908,11.4285714 L14.9450549,17.8754579" id="Line"></path>
+                <path d="M12.6007326,15.5311355 L6.73992674,15.5311355" id="Line"></path>
+                <path d="M6.15384615,18.4615385 L2.05128205,8.4981685" id="Line"></path>
+                <path d="M4.3956044,9.08424908 L13.7728938,7.32600733" id="Line"></path>
+                <path d="M12.014652,7.32600733 L12.014652,13.1868132" id="Line"></path>
+            </g>
+        </g>
+    </g>
+</svg>

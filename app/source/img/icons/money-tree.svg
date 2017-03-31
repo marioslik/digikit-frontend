@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="85px" height="85px" viewBox="0 0 85 85" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>ICON/Money Tree</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="SYMBOLS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="ICON/Money-Tree" stroke-width="2">
+            <path d="M43,83 L43,45.4" id="Stroke-25" stroke="#444444"></path>
+            <path d="M43,74.2 C43,61.4514286 48.46,55.8 65.4,55.8 C65.4,70.1257143 58.96,74.2 43,74.2 L43,74.2 Z" id="Stroke-26" stroke="#444444"></path>
+            <polygon id="Stroke-27" stroke="#828080" points="3 3 83 3 83 45.4 3 45.4"></polygon>
+            <path d="M42.6,19 C45.4717,19 47.8,21.3283 47.8,24.2 C47.8,27.0717 45.4717,29.4 42.6,29.4 C39.7283,29.4 37.4,27.0717 37.4,24.2 C37.4,21.3283 39.7283,19 42.6,19 L42.6,19 Z" id="Stroke-28" stroke="#FFD070"></path>
+            <path d="M67,11 L19,11 C19,15.356 15.4,18.92 11,18.92 L11,29.48 C15.4,29.48 19,33.044 19,37.4 L67,37.4 C67,33.044 70.6,29.48 75,29.48 L75,18.92 C70.6,18.92 67,15.356 67,11 L67,11 Z" id="Stroke-29" stroke="#828080"></path>
+        </g>
+    </g>
+</svg>

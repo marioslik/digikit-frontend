@@ -1,6 +1,34 @@
 $(function() {
     console.log('app started');
 
+    /* Animated scroll */
+
+    var wrapper = $("#wrapper"),
+    headerHeight = $('header').height(),
+    $menu = $("#nav-menu, #nav-header, #logo-section"),
+    $window = $(window);
+
+
+    $menu.on("click","a", function(){
+        var $this = $(this),
+            href = $this.attr("href"),
+            topY = $(href).offset().top - headerHeight;
+
+        TweenMax.to($window, 1, {
+            scrollTo:{
+                y: topY,
+                autoKill: true
+            },
+            ease:Power2.easeInOut
+         });
+         $('#nav-menu a').removeClass('active');
+         $this.addClass('active');
+
+
+      return false;
+    });
+
+
     TweenMax.set('#main-nav', {
         className: "+=inactive"
     });

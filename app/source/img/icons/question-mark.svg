@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="85px" height="85px" viewBox="0 0 85 85" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>ICON/Question Mark</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="SYMBOLS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="ICON/Question-Mark" stroke-width="2">
+            <path d="M43,3 C65.0906667,3 83,20.9093333 83,43 C83,65.0906667 65.0906667,83 43,83 C20.9093333,83 3,65.0906667 3,43 C3,20.9093333 20.9093333,3 43,3 L43,3 Z" id="Stroke-515" stroke="#444444"></path>
+            <path d="M43.4651163,61.6046512 C45.7772093,61.6046512 47.6511628,63.4786047 47.6511628,65.7906977 C47.6511628,68.1027907 45.7772093,69.9767442 43.4651163,69.9767442 C41.1530233,69.9767442 39.2790698,68.1027907 39.2790698,65.7906977 C39.2790698,63.4786047 41.1530233,61.6046512 43.4651163,61.6046512 L43.4651163,61.6046512 Z" id="Stroke-516" stroke="#FFD070"></path>
+            <path d="M30.9069767,26.7567084 C32.9418605,22.1234347 37.8255814,18.8139535 43.3875969,18.8139535 C50.8488372,18.8139535 56.9534884,24.7710197 56.9534884,32.0518784 C56.9534884,39.332737 50.8488372,45.2898032 43.3875969,45.2898032 L43.3875969,53.2325581" id="Stroke-517" stroke="#FFD070"></path>
+        </g>
+    </g>
+</svg>

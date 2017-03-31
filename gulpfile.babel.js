@@ -150,6 +150,12 @@ gulp.task('img', () =>
     .pipe(gulp.dest(`./app/build/img`))
 );
 
+gulp.task('icons', () =>
+    gulp.src(`./app/source/img/icons/*`)
+    .pipe(imagemin([imagemin.gifsicle(), imagemin.jpegtran(), imagemin.optipng(), imagemin.svgo()]))
+    .pipe(gulp.dest(`./app/build/img/icons`))
+);
+
 
 gulp.task('watch', () => {
     gulp.watch([`./app/source/sass/**/*.scss`], ['sass']);
@@ -164,4 +170,4 @@ gulp.task('serve', () => {
     });
 });
 
-gulp.task('default', ['vendor-js', 'js', 'sass', 'img', 'watch', 'serve']);
+gulp.task('default', ['vendor-js', 'js', 'sass', 'img', 'icons', 'watch', 'serve']);

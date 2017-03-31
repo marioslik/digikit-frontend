@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="87px" height="85px" viewBox="0 0 87 85" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>ICON/Hand Offering</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="SYMBOLS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="ICON/Hand-Offering" stroke-width="2">
+            <g id="Hand-Offering">
+                <path d="M57,36 C57,30.3 66,21 66,21 C66,21 75,30.3 75,36 C75,41.7 70.5,45 66,45 C61.5,45 57,41.7 57,36 L57,36 Z" id="Stroke-130" stroke="#FCB718"></path>
+                <path d="M27,15 C27,9.3 36,0 36,0 C36,0 45,9.3 45,15 C45,20.7 40.5,24 36,24 C31.5,24 27,20.7 27,15 L27,15 Z" id="Stroke-131" stroke="#FCB718"></path>
+                <path d="M12,45 L15,45 C21.9,45 29.4,48.6 33,54 L45,54 C51,54 57,60 57,66 L30,66" id="Stroke-132" stroke="#3C3C3D"></path>
+                <path d="M55.2,60 L75,60 C85.8,60 87,66 87,66 L44.1,83.4 C40.8,84.9 36.9,84.6 33.6,83.1 L12,72" id="Stroke-133" stroke="#3C3C3D"></path>
+                <polygon id="Stroke-134" stroke="#3C3C3D" points="0 39 12 39 12 78 0 78"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="85px" height="85px" viewBox="0 0 85 85" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>ICON/Bank</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="SYMBOLS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="ICON/Bank" stroke-width="2">
+            <g id="Group-2" transform="translate(4.000000, 3.000000)">
+                <path d="M32.5581395,71.8203689 L32.5581395,30.9222133" id="Stroke-1127" stroke="#828080"></path>
+                <path d="M42.7906977,30.9222133 L42.7906977,71.8203689" id="Stroke-1128" stroke="#828080"></path>
+                <path d="M7.44186047,71.8203689 L7.44186047,30.9222133" id="Stroke-1129" stroke="#828080"></path>
+                <path d="M18.6046512,30.9222133 L18.6046512,71.8203689" id="Stroke-1130" stroke="#828080"></path>
+                <path d="M56.744186,71.8203689 L56.744186,30.9222133" id="Stroke-1131" stroke="#828080"></path>
+                <path d="M67.9069767,30.9222133 L67.9069767,71.8203689" id="Stroke-1132" stroke="#828080"></path>
+                <path d="M33.4883721,16.6158781 C33.4883721,13.6044106 35.9279402,11.1627907 38.9368771,11.1627907 C41.945814,11.1627907 44.3853821,13.6044106 44.3853821,16.6158781 C44.3853821,19.6273456 41.945814,22.0689655 38.9368771,22.0689655 C35.9279402,22.0689655 33.4883721,19.6273456 33.4883721,16.6158781 L33.4883721,16.6158781 Z" id="Stroke-1133" stroke="#444444"></path>
+                <polygon id="Stroke-1134" stroke="#444444" points="76.2790698 80 0 80 0 71.8203689 76.2790698 71.8203689"></polygon>
+                <polygon id="Stroke-1126" stroke="#444444" points="38.1395349 0 0 21.8123496 0 29.9919808 76.2790698 29.9919808 76.2790698 21.8123496"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

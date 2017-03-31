@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="85px" height="85px" viewBox="0 0 85 85" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>ICON/Chart</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="SYMBOLS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="ICON/Chart" stroke-width="2">
+            <g id="Group-2" transform="translate(3.000000, 3.000000)">
+                <path d="M39,61.3333333 L39,77.3333333" id="Stroke-986" stroke="#CCC9C9"></path>
+                <path d="M32,61.3333333 L16,80" id="Stroke-987" stroke="#CCC9C9"></path>
+                <path d="M48,61.3333333 L64,80" id="Stroke-988" stroke="#CCC9C9"></path>
+                <polyline id="Stroke-989" stroke="#444444" points="72 53.3333333 72 8 8 8 8 53.3333333"></polyline>
+                <polygon id="Stroke-990" stroke="#444444" points="45.3333333 8 34.6666667 8 34.6666667 0 45.3333333 0"></polygon>
+                <polygon id="Stroke-991" stroke="#444444" points="80 61.3333333 0 61.3333333 0 53.3333333 80 53.3333333"></polygon>
+                <polyline id="Stroke-1007" stroke="#FFD070" points="56 24 40 40 29.3333333 29.3333333 21.3333333 37.3333333"></polyline>
+                <polyline id="Stroke-1008" stroke="#FFD070" points="45.3333333 24 56 24 56 34.6666667"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

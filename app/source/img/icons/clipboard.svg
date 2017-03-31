@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="85px" height="85px" viewBox="0 0 85 85" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>ICON/Clipboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="SYMBOLS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="ICON/Clipboard" stroke-width="2">
+            <g id="Group-2" transform="translate(11.000000, 3.000000)">
+                <polyline id="Stroke-1306" stroke="#444444" points="45.3333333 8.22429907 64 8.22429907 64 80 0 80 0 8.22429907 17.6640625 8.22429907"></polyline>
+                <polyline id="Stroke-1307" stroke="#444444" points="42.1647059 68.7850467 42.1647059 55.3271028 55.7176471 55.3271028"></polyline>
+                <polyline id="Stroke-1308" stroke="#444444" points="45.0091503 15.7009346 55.7176471 15.7009346 55.7176471 55.5140187 42.3320261 68.7850467 7.52941176 68.7850467 7.52941176 15.7009346 17.4545037 15.7009346"></polyline>
+                <path d="M18.0705882,31 L44.4235294,31" id="Stroke-1309" stroke="#CCC9C9"></path>
+                <path d="M18.0705882,42 L44.4235294,42" id="Stroke-1310" stroke="#CCC9C9"></path>
+                <path d="M18.0705882,53 L28.6117647,53" id="Stroke-1311" stroke="#CCC9C9"></path>
+                <path d="M36.5176471,5.34045394 C36.5176471,2.39118825 34.1577412,0 31.2470588,0 C28.3363765,0 25.9764706,2.39118825 25.9764706,5.34045394 L18.0705882,5.34045394 L18.0705882,18.6915888 L44.4235294,18.6915888 L44.4235294,5.34045394 L36.5176471,5.34045394 L36.5176471,5.34045394 Z" id="Stroke-1312" stroke="#FFD070"></path>
+            </g>
+        </g>
+    </g>
+</svg>

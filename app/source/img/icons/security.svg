@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="85px" height="85px" viewBox="0 0 85 85" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>ICON/Security</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="SYMBOLS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="ICON/Security" stroke-width="2">
+            <path d="M83,69 L62.5370476,69 C59.9643333,69 57.7327143,67.2193846 57.1540952,64.7063077 L54,51" id="Stroke-41" stroke="#444444"></path>
+            <path d="M82,37.4187175 L15.0744465,50 L8,11.6420864 L69.4137076,0.0965100704 C72.4576255,-0.475109151 75.3838229,1.55102631 75.9514043,4.62418707 L82,37.4187175 L82,37.4187175 Z" id="Stroke-42" stroke="#444444"></path>
+            <path d="M0,17 L6,47" id="Stroke-43" stroke="#FFD070"></path>
+            <path d="M30,20 C32.2093333,20 34,21.7906667 34,24 C34,26.2093333 32.2093333,28 30,28 C27.7906667,28 26,26.2093333 26,24 C26,21.7906667 27.7906667,20 30,20 L30,20 Z" id="Stroke-44" stroke="#828080"></path>
+            <path d="M83,57 L83,82" id="Stroke-45" stroke="#444444"></path>
+        </g>
+    </g>
+</svg>

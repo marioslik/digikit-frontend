@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="85px" height="85px" viewBox="0 0 85 85" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>ICON/Document</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="SYMBOLS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="ICON/Document" stroke-width="2">
+            <path d="M19,47.3333333 L3,47.3333333 L3,74 C3,78.4186667 6.58133333,82 11,82" id="Stroke-2962" stroke="#444444"></path>
+            <path d="M19,2 L19,74 C19,78.4186667 15.4186667,82 11,82 L75,82 C79.4186667,82 83,78.4186667 83,74 L83,2 L19,2 L19,2 Z" id="Stroke-2963" stroke="#444444"></path>
+            <path d="M59,15 L69.6666667,15" id="Stroke-2964" stroke="#444444"></path>
+            <path d="M59,28 L69.6666667,28" id="Stroke-2965" stroke="#444444"></path>
+            <path d="M32.3333333,42 L69.6666667,42" id="Stroke-2966" stroke="#444444"></path>
+            <polygon id="Stroke-2967" stroke="#FFD070" points="48.3333333 28.6666667 32.3333333 28.6666667 32.3333333 15.3333333 48.3333333 15.3333333"></polygon>
+            <path d="M43,68 L32.3333333,68" id="Stroke-2968" stroke="#444444"></path>
+            <path d="M43,55 L32.3333333,55" id="Stroke-2969" stroke="#444444"></path>
+            <polygon id="Stroke-2970" stroke="#FFD070" points="53.6666667 55.3333333 69.6666667 55.3333333 69.6666667 68.6666667 53.6666667 68.6666667"></polygon>
+        </g>
+    </g>
+</svg>

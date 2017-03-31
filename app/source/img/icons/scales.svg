@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="85px" height="85px" viewBox="0 0 85 85" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>ICON/Scales</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="SYMBOLS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ICON/Scales" stroke-width="2">
+            <g id="Conveyancing" transform="translate(1.000000, 9.000000)">
+                <path d="M16.9786096,5 L35.6650141,5" id="Path" stroke="#828080" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M16.875557,5.50980392 L2.07592469,26.6008506" id="Line-Copy" stroke="#828080" stroke-linecap="round"></path>
+                <path d="M30.9030749,5.91666667 L16.5103053,26.6008506" id="Line-Copy-2" stroke="#828080" stroke-linecap="round" transform="translate(23.792224, 16.088235) scale(-1, 1) translate(-23.792224, -16.088235) "></path>
+                <path d="M67.5128119,5.50980392 L52.7131796,26.6008506" id="Line-Copy" stroke="#828080" stroke-linecap="round"></path>
+                <path d="M81.5403298,5.91666667 L67.1475602,26.6008506" id="Line-Copy-2" stroke="#828080" stroke-linecap="round" transform="translate(74.429479, 16.088235) scale(-1, 1) translate(-74.429479, -16.088235) "></path>
+                <path d="M82.9421171,27.4803922 C82.9421171,32.6276127 75.4393647,37.245098 67.0744701,37.245098 C58.7095755,37.245098 51.206823,32.6276127 51.206823,27.4803922" id="Path-Copy" stroke="#FFD070"></path>
+                <path d="M51.1254703,27.6666667 L83.0235095,27.6666667" id="Stroke-1339-Copy" stroke="#FFD070" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M41,10.6150349 L41,63.8309926" id="Stroke-1337" stroke="#444444" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M23.7719846,64 L59.3508987,64" id="Stroke-1338" stroke="#444444" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M47.0108696,5 L67.1308704,5" id="Path" stroke="#828080" stroke-linecap="round" fill="#D8D8D8"></path>
+                <path d="M41.6862745,0 C44.3825539,0 46.5686275,2.18607353 46.5686275,4.88235294 C46.5686275,7.57863235 44.3825539,9.76470588 41.6862745,9.76470588 C38.9899951,9.76470588 36.8039216,7.57863235 36.8039216,4.88235294 C36.8039216,2.18607353 38.9899951,0 41.6862745,0 Z" id="Stroke-1341" stroke="#444444" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M32.3048622,27.4803922 C32.3048622,32.6276127 24.8021098,37.245098 16.4372152,37.245098 C8.07232056,37.245098 0.56956811,32.6276127 0.56956811,27.4803922" id="Path-Copy" stroke="#FFD070"></path>
+                <path d="M0.488215428,27.6666667 L32.3862546,27.6666667" id="Stroke-1339-Copy" stroke="#FFD070" stroke-linecap="round" stroke-linejoin="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="85px" height="85px" viewBox="0 0 85 85" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>ICON/Padlock</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="SYMBOLS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="ICON/Padlock" stroke-width="2">
+            <polygon id="Stroke-271" stroke="#FFD070" points="2 85 53.1931818 85 53.1931818 45.3977273 2 45.3977273"></polygon>
+            <path d="M12.625,45.3977273 L12.625,26.8354743 C12.625,18.9493725 18.8953438,12.5568182 26.6306818,12.5568182 C34.3660199,12.5568182 40.6363636,18.9493725 40.6363636,26.8354743 L40.6363636,45.3977273" id="Stroke-272" stroke="#FFD070"></path>
+            <path d="M27.1136364,56.9886364 C30.3141761,56.9886364 32.9090909,59.5835511 32.9090909,62.7840909 C32.9090909,65.9846307 30.3141761,68.5795455 27.1136364,68.5795455 C23.9130966,68.5795455 21.3181818,65.9846307 21.3181818,62.7840909 C21.3181818,59.5835511 23.9130966,56.9886364 27.1136364,56.9886364 L27.1136364,56.9886364 Z" id="Stroke-273" stroke="#444444"></path>
+            <path d="M52.2272727,0 C69.2975207,0 83.1363636,13.838843 83.1363636,30.9090909" id="Stroke-274" stroke="#828080"></path>
+            <path d="M52.2272727,14.4886364 C61.828892,14.4886364 69.6136364,22.2733807 69.6136364,31.875" id="Stroke-275" stroke="#828080"></path>
+            <path d="M27,68.5795455 L27,74.375" id="Stroke-276" stroke="#444444"></path>
+        </g>
+    </g>
+</svg>

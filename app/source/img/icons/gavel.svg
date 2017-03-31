@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="85px" height="85px" viewBox="0 0 85 85" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>ICON/GAVEL</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="SYMBOLS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="ICON/GAVEL" stroke-width="2">
+            <g id="GAVEL">
+                <polyline id="Stroke-772" stroke="#3C3C3D" points="57.8571429 31.862069 81 55.0344828 75.2142857 60.8275862 52.0714286 37.6551724"></polyline>
+                <path d="M28.9285714,31.862069 L52.0714286,8.68965517" id="Stroke-770" stroke="#444444"></path>
+                <path d="M66.5357143,23.1724138 L43.3928571,46.3448276" id="Stroke-771" stroke="#444444"></path>
+                <polygon id="Stroke-1342" stroke="#444444" points="26.0357143 28.9655172 46.2857143 49.2413793 40.5 55.0344828 20.25 34.7586207"></polygon>
+                <polygon id="Stroke-1343" stroke="#444444" points="54.9642857 0 75.2142857 20.2758621 69.4285714 26.0689655 49.1785714 5.79310345"></polygon>
+                <polygon id="Stroke-1344" stroke="#FCB718" points="52.0714286 84 0 84 0 75.3103448 52.0714286 75.3103448"></polygon>
+                <polyline id="Stroke-1345" stroke="#FCB718" points="5.78571429 75.3103448 5.78571429 66.6206897 46.2857143 66.6206897 46.2857143 75.3103448"></polyline>
+                <path d="M2.89285714,55.0344828 L11.5714286,55.0344828" id="Stroke-1346" stroke="#C5C2C2"></path>
+                <path d="M8.8239375,40.6972759 L14.9611339,46.8423103" id="Stroke-1347" stroke="#C5C2C2"></path>
+            </g>
+        </g>
+    </g>
+</svg>

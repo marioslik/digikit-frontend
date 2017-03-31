@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="85px" height="85px" viewBox="0 0 85 85" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>ICON/Life ring</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="SYMBOLS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="ICON/Life-ring" stroke-width="2">
+            <g id="Group-2" transform="translate(3.000000, 3.000000)">
+                <path d="M32.9841333,22.6988 L17.3481333,7.0628" id="Stroke-4641" stroke="#FFD070"></path>
+                <path d="M7.0628,17.348 L22.6988,32.984" id="Stroke-4643" stroke="#FFD070"></path>
+                <path d="M57.302,32.9837333 L72.938,17.3477333" id="Stroke-4645" stroke="#FFD070"></path>
+                <path d="M62.6525333,7.0628 L47.0165333,22.6988" id="Stroke-4647" stroke="#FFD070"></path>
+                <path d="M47.0164,57.3017333 L62.6524,72.9377333" id="Stroke-4649" stroke="#FFD070"></path>
+                <path d="M72.9377333,62.6525333 L57.3017333,47.0165333" id="Stroke-4651" stroke="#FFD070"></path>
+                <path d="M22.6985333,47.0168 L7.06253333,62.6528" id="Stroke-4653" stroke="#FFD070"></path>
+                <path d="M17.348,72.9377333 L32.984,57.3017333" id="Stroke-4655" stroke="#FFD070"></path>
+                <path d="M68.284,11.716 C79.1198669,22.5518669 82.4393452,38.0575693 78.2424349,51.7541223 C76.3889447,57.8029594 73.0694664,63.498942 68.284,68.284 C52.664,83.9053333 27.3373333,83.9053333 11.716,68.284 C-3.90533333,52.664 -3.90533333,27.3373333 11.716,11.716 C27.3373333,-3.90533333 52.664,-3.90533333 68.284,11.716 Z" id="Stroke-4657" stroke="#444444"></path>
+                <path d="M26.8009333,26.8009333 C34.0902667,19.5116 45.9102667,19.5116 53.1996,26.8009333 C60.4889333,34.0902667 60.4889333,45.9102667 53.1996,53.1996 C45.9102667,60.4889333 34.0902667,60.4889333 26.8009333,53.1996 C19.5116,45.9102667 19.5116,34.0902667 26.8009333,26.8009333 L26.8009333,26.8009333 Z" id="Stroke-4659" stroke="#444444"></path>
+            </g>
+        </g>
+    </g>
+</svg>

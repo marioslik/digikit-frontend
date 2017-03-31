@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="81px" height="81px" viewBox="0 0 81 81" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>ICON/Diamond</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="SYMBOLS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="ICON/Diamond" stroke-width="2">
+            <g id="Group-2" transform="translate(0.000000, 3.000000)">
+                <path d="M0,22.8584618 L80.0046164,22.8584618" id="Stroke-209" stroke="#FCB718"></path>
+                <polyline id="Stroke-210" stroke="#444444" points="40.0023082 74.2900009 54.2888468 22.8584618 40.0023082 0"></polyline>
+                <polyline id="Stroke-211" stroke="#444444" points="40.0023082 0 25.7157695 22.8584618 40.0023082 74.2900009"></polyline>
+                <path d="M14.2865386,0 L25.7157695,22.8584618" id="Stroke-212" stroke="#444444"></path>
+                <path d="M65.7180777,0 L54.2888468,22.8584618" id="Stroke-213" stroke="#444444"></path>
+                <polygon id="Stroke-214" stroke="#444444" points="80.0046164 22.8584618 40.0023082 74.2900009 0 22.8584618 14.2865386 0 65.7180777 0"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

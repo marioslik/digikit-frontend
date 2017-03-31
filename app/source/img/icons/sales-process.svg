@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="85px" height="85px" viewBox="0 0 85 85" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>ICON/Sales Process</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="SYMBOLS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="ICON/Sales-Process" stroke-width="2">
+            <g id="Sales-Process">
+                <polygon id="Stroke-812" stroke="#444444" points="49.2105263 85 85 49.2105263 35.7894737 0 0 0 0 35.7894737"></polygon>
+                <path d="M19.3859649,13.4210526 C22.6800877,13.4210526 25.3508772,16.0918421 25.3508772,19.3859649 C25.3508772,22.6800877 22.6800877,25.3508772 19.3859649,25.3508772 C16.0918421,25.3508772 13.4210526,22.6800877 13.4210526,19.3859649 C13.4210526,16.0918421 16.0918421,13.4210526 19.3859649,13.4210526 L19.3859649,13.4210526 Z" id="Stroke-813" stroke="#444444"></path>
+                <path d="M43.245614,31.3157895 L61.1403509,49.2105263" id="Stroke-814" stroke="#C5C2C2"></path>
+                <path d="M31.3157895,43.245614 L49.2105263,61.1403509" id="Stroke-815" stroke="#C5C2C2"></path>
+                <path d="M24.970614,60.7600877 C23.865614,73.0507895 20.4507018,82.0175439 16.4035088,82.0175439 C11.4615789,82.0175439 7.45614035,68.6650877 7.45614035,52.1929825 C7.45614035,35.7208772 11.4615789,22.3684211 16.4035088,22.3684211 C17.7784211,22.3684211 19.0951754,23.4391228 20.2598246,25.2867544" id="Stroke-816" stroke="#FCB718"></path>
+            </g>
+        </g>
+    </g>
+</svg>

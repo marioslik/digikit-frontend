@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="85px" height="85px" viewBox="0 0 85 85" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>ICON/Map Pin</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="SYMBOLS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="ICON/Map-Pin" stroke-width="2">
+            <g id="Group-2" transform="translate(5.000000, 3.000000)">
+                <polyline id="Stroke-3974" stroke="#444444" points="28.1033752 58.9010989 13.3437991 58.9010989 0 80 74.7252747 80 61.3814757 58.9010989 46.5364992 58.9010989"></polyline>
+                <path d="M64.1758242,25.5330542 C64.1758242,41.2921018 37.3626374,69.4505495 37.3626374,69.4505495 C37.3626374,69.4505495 10.5494505,41.2921018 10.5494505,25.5330542 C10.5494505,9.37544969 24.4051648,0 37.3626374,0 C50.3201099,0 64.1758242,9.37544969 64.1758242,25.5330542 L64.1758242,25.5330542 Z" id="Stroke-3976" stroke="#FFD070"></path>
+                <path d="M29.010989,27.2527473 C29.010989,22.8826374 32.552967,19.3406593 36.9230769,19.3406593 C41.2931868,19.3406593 44.8351648,22.8826374 44.8351648,27.2527473 C44.8351648,31.6228571 41.2931868,35.1648352 36.9230769,35.1648352 C32.552967,35.1648352 29.010989,31.6228571 29.010989,27.2527473 L29.010989,27.2527473 Z" id="Stroke-3977" stroke="#FFD070"></path>
+            </g>
+        </g>
+    </g>
+</svg>

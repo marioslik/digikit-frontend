@@ -4812,14 +4812,14 @@ header {
 #nav-header {
   position: relative;
   background: #3c3c3c;
-  padding: 20px;
+  padding: 20px 30px;
   width: 100%; }
 
 #close-nav {
   position: absolute;
   right: 0;
   top: 0;
-  width: 64px;
+  width: 84px;
   height: 100%;
   text-align: center;
   line-height: 2.5;
@@ -4827,16 +4827,52 @@ header {
   color: #fff;
   font-size: 25px;
   cursor: pointer; }
+  #close-nav svg {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    margin-right: -13px;
+    margin-top: -13px;
+    transition: all 0.3s ease-in-out; }
+    #close-nav svg:hover, #close-nav svg:focus {
+      transform: rotate(180deg); }
 
 #nav-menu {
   padding: 20px; }
   #nav-menu a {
-    color: #fff; }
+    color: #DDDBDB;
+    font-size: 24px;
+    padding: 16px 0px;
+    transition: 0.3s ease-in-out;
+    display: inline-block;
+    position: relative; }
+    #nav-menu a:hover, #nav-menu a:focus {
+      color: #FFFFFF; }
+    #nav-menu a::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: transparent;
+      position: absolute;
+      bottom: 3px;
+      left: 0;
+      transition: all 0.5s ease-in-out;
+      transform: scaleX(0); }
+    #nav-menu a.active::after {
+      background-color: #FCB718;
+      transform: scaleX(1); }
 
 .logo-compact {
   color: #FCB718;
   font-size: 25px;
-  line-height: 1; }
+  line-height: 1;
+  display: inline-block;
+  transition: all 0.3s ease-in-out; }
+  .logo-compact svg #Logo-Ampersand {
+    transition: all 0.2s ease-in-out; }
+  .logo-compact:hover svg #Logo-Ampersand, .logo-compact:focus svg #Logo-Ampersand {
+    fill: #fff; }
 
 #logo-section {
   display: inline-block;
@@ -4866,11 +4902,18 @@ header {
 #nav-toggle {
   position: absolute;
   right: 20px;
-  top: 25px;
-  cursor: pointer; }
+  top: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out; }
   #nav-toggle svg {
     width: 35px;
-    height: 25px; }
+    height: 35px; }
+  #nav-toggle .bar {
+    transition: all 0.2s ease-in-out; }
+  #nav-toggle:hover .bar:nth-of-type(1), #nav-toggle:focus .bar:nth-of-type(1) {
+    transform: translateY(-4px); }
+  #nav-toggle:hover .bar:nth-of-type(3), #nav-toggle:focus .bar:nth-of-type(3) {
+    transform: translateY(4px); }
 
 #nav-utilities {
   position: absolute;
@@ -4879,18 +4922,41 @@ header {
   #nav-utilities .menu {
     width: 100%;
     display: block;
-    font-size: 0; }
+    font-size: 0;
+    position: relative; }
   #nav-utilities .menu li {
     font-size: 16px;
     text-align: center;
     width: 50%;
     display: inline-block;
     margin: 0;
-    background: #3c3c3c; }
+    background: #3c3c3c;
+    border: 1px solid rgba(60, 60, 60, 0.95); }
+    #nav-utilities .menu li:last-of-type {
+      position: relative;
+      right: -2px; }
     #nav-utilities .menu li a {
       color: #fff;
-      padding: 20px;
-      border-left: 1px solid rgba(60, 60, 60, 0.9); }
+      padding: 40px 10px 40px 50px;
+      border-left: 1px solid rgba(60, 60, 60, 0.9);
+      height: 110px;
+      border-left: 1px solid rgba(60, 60, 60, 0.9);
+      margin: 0;
+      font-family: WorkSans-Light;
+      font-size: 24px; }
+  #nav-utilities .btn-print {
+    width: auto !important;
+    background-position: 27% 50%;
+    transition: all 0.3s ease-in-out; }
+    #nav-utilities .btn-print:hover, #nav-utilities .btn-print:focus {
+      box-shadow: none;
+      background-color: #383839; }
+  #nav-utilities .btn-share {
+    background: #3C3C3D url(../img/icons/share.svg) no-repeat 25% 50%;
+    transition: all 0.3s ease-in-out; }
+    #nav-utilities .btn-share:hover, #nav-utilities .btn-share:focus {
+      box-shadow: none;
+      background-color: #383839; }
 
 /* Sections */
 .main-container {
@@ -5171,19 +5237,19 @@ section {
     text-align: center; }
 
 #card-office-profile > h3 {
-  background-image: url("../img/suit-and-tie.svg"); }
+  background-image: url("../img/icons/suit-and-tie.svg"); }
 
 #card-rh-difference > h3 {
-  background-image: url("../img/logo-ampersand.svg"); }
+  background-image: url("../img/icons/logo-ampersand.svg"); }
 
 #card-what-pp-say h3 {
-  background-image: url("../img/speech-bubble.svg"); }
+  background-image: url("../img/icons/speech-bubble.svg"); }
 
 #card-recognised h3 {
-  background-image: url("../img/award.svg"); }
+  background-image: url("../img/icons/award.svg"); }
 
 #card-international h3 {
-  background-image: url("../img/globe.svg"); }
+  background-image: url("../img/icons/globe.svg"); }
 
 .market-map {
   padding: 0;
@@ -5439,7 +5505,7 @@ footer {
   letter-spacing: 0.8px;
   text-align: center;
   margin: 30px auto;
-  background: #3C3C3D url(../img/print.svg) no-repeat 30% 50%;
+  background: #3C3C3D url(../img/icons/print.svg) no-repeat 30% 50%;
   padding: 20px 20px 20px 50px;
   transition: all 0.2s ease-in-out; }
   .btn-print:hover, .btn-print:focus {
@@ -5455,7 +5521,7 @@ footer {
   padding: 12px 35px 12px 5px;
   border-bottom: 2px solid #FCB718;
   position: relative;
-  background: url(../img/arrow-circle.svg) no-repeat 97% 50%;
+  background: url(../img/icons/arrow-circle.svg) no-repeat 97% 50%;
   cursor: pointer;
   transition: all 0.3s ease-in-out; }
   .btn-circ-arrow:hover, .btn-circ-arrow:focus {

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>ICON/Graph</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="SYMBOLS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="ICON/Graph" stroke-width="2">
+            <path d="M40,61.3334667 L40,77.3334667" id="Stroke-244" stroke="#3C3C3D"></path>
+            <path d="M32,61.3334667 L16,80.0001333" id="Stroke-245" stroke="#3C3C3D"></path>
+            <path d="M48,61.3334667 L64,80.0001333" id="Stroke-246" stroke="#3C3C3D"></path>
+            <polygon id="Stroke-247" stroke="#3C3C3D" points="34.6666667 0 45.3333333 0 45.3333333 8 34.6666667 8"></polygon>
+            <polyline id="Stroke-248" stroke="#444444" points="72 53.3334667 72 8.00013333 8 8.00013333 8 53.3334667"></polyline>
+            <polygon id="Stroke-249" stroke="#FCB718" points="34.6666667 18.6666667 45.3333333 18.6666667 45.3333333 42.6666667 34.6666667 42.6666667"></polygon>
+            <polygon id="Stroke-250" stroke="#FCB718" points="16 32 26.6666667 32 26.6666667 42.6666667 16 42.6666667"></polygon>
+            <polygon id="Stroke-251" stroke="#FCB718" points="53.3333333 26.6666667 64 26.6666667 64 42.6666667 53.3333333 42.6666667"></polygon>
+            <polygon id="Stroke-252" stroke="#444444" points="0 53.3333333 80 53.3333333 80 61.3333333 0 61.3333333"></polygon>
+        </g>
+    </g>
+</svg>

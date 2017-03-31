@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="31px" height="32px" viewBox="0 0 31 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Share Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Menu-Open" transform="translate(-1443.000000, -948.000000)">
+            <g id="MENU" transform="translate(1057.000000, 0.000000)">
+                <g id="SHARE" transform="translate(345.366972, 909.000000)">
+                    <g id="Group-3" transform="translate(42.000000, 40.000000)">
+                        <g id="Share-Icon">
+                            <g>
+                                <path d="M7.5,13.1 L20.5,5.9" id="Stroke-736" stroke="#FFFFFF" stroke-width="2"></path>
+                                <path d="M7.5,16.9 L20.5,24.1" id="Stroke-737" stroke="#FFFFFF" stroke-width="2"></path>
+                                <path d="M8,15 C8,17.209 6.209,19 4,19 C1.791,19 0,17.209 0,15 C0,12.791 1.791,11 4,11 C6.209,11 8,12.791 8,15 Z" id="Stroke-738" stroke="#FCB718" stroke-width="2"></path>
+                                <path d="M24,0 C26.209,0 28,1.791 28,4 C28,6.209 26.209,8 24,8 C21.791,8 20,6.209 20,4 C20,1.791 21.791,0 24,0 L24,0 Z" id="Stroke-739" stroke="#FCB718" stroke-width="2"></path>
+                                <path d="M24,22 C26.209,22 28,23.791 28,26 C28,28.209 26.209,30 24,30 C21.791,30 20,28.209 20,26 C20,23.791 21.791,22 24,22 L24,22 Z" id="Stroke-740" stroke="#FCB718" stroke-width="2"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="85px" height="85px" viewBox="0 0 85 85" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>ICON/Home</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="SYMBOLS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="ICON/Home">
+            <g id="Group-2" transform="translate(2.000000, 24.000000)">
+                <polygon id="Rectangle-43" stroke="#FFD070" stroke-linejoin="bevel" fill="#FFD070" points="65.3488613 27.9217862 71.8837475 27.9217862 71.8837475 34.4566723 69.8935196 34.4566723 65.3488613 34.4566723"></polygon>
+                <path d="M81.157784,18.3276918 L53.6486643,18.3276918" id="Stroke-193" stroke="#444444" stroke-width="2" stroke-linejoin="round"></path>
+                <polyline id="Stroke-212" stroke="#444444" stroke-width="2" stroke-linejoin="round" points="39.5586273 0.2267277 53.6486643 18.9196168 53.6486643 35.6448335"></polyline>
+                <polygon id="Stroke-228" stroke="#444444" stroke-width="2" stroke-linejoin="round" points="26.1395445 18.9196168 40.0618429 0.2267277 67.9064397 0.2267277 73.5075577 7.74711515 81.8287381 18.9196168 81.8287381 35.6448335 26.1395445 35.6448335"></polygon>
+                <path d="M0,19.0105778 C0,10.69345 10.69345,1.18816112 10.69345,1.18816112 C10.69345,1.18816112 21.3869001,10.7926615 21.3869001,19.0105778 C21.3869001,24.9163327 16.5992049,29.7040279 10.69345,29.7040279 C4.78769521,29.7040279 0,24.9163327 0,19.0105778 L0,19.0105778 Z" id="Stroke-198" stroke="#444444" stroke-width="2" stroke-linejoin="round"></path>
+                <path d="M10.6107689,11.8816112 L10.6107689,35.6448335" id="Stroke-199" stroke="#828080" stroke-width="2" stroke-linejoin="round"></path>
+                <path d="M3.56448335,35.6907682 L17.8224167,35.6907682" id="Stroke-200" stroke="#828080" stroke-width="2" stroke-linejoin="round"></path>
+                <path d="M10.69345,25.545464 L16.6342556,19.6046584" id="Stroke-201" stroke="#828080" stroke-width="2" stroke-linejoin="round"></path>
+                <path d="M4.75264446,16.0401751 L10.69345,21.9809806" id="Stroke-202" stroke="#828080" stroke-width="2" stroke-linejoin="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>
