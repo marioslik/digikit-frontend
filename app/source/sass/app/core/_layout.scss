@@ -5,6 +5,17 @@
 .light-grey {
     background-color: $LIGHT_GREY;
 }
+
+.row {
+  padding-left:15px;
+  padding-right:15px;
+
+  @media screen and (min-width: 1200px) {
+    padding-left:0px;
+    padding-right:0px;
+  }
+}
+
 /* Header */
 header {
     padding: 15px 20px;
@@ -94,7 +105,7 @@ header {
             position: absolute;
             bottom: 3px;
             left: 0;
-            transition: all 0.5s ease-in-out;
+            transition: all 0.25s ease-in-out 0.1s;
             transform: scaleX(0);
         }
 
@@ -273,6 +284,7 @@ section {
     .line {
         top: 60px;
         right: 0;
+        transform-origin: left;
     }
 
     h1 {
@@ -336,6 +348,9 @@ section {
     .line {
         left: 34%;
         top: 122px;
+        z-index: 4;
+        transform-origin: right;
+
         @media screen and (min-width: 64em) {
             left: 30%;
         }
@@ -363,6 +378,8 @@ section {
 }
 
 .agent-photo {
+      padding-left: 0;
+      z-index: 3;
     img {
         width: 100%;
     }
@@ -526,7 +543,7 @@ section {
     }
 
     @media screen and (min-width: 60em) {
-        min-width: 284px;
+        min-width: 235px;
         width: 30%;
         min-height: 340px;
     }
@@ -610,6 +627,11 @@ section {
         z-index: 0;
         top: -160px;
         float: right !important;
+        right: 0px;
+    }
+
+    @media screen and (min-width: 1200em) {
+        right: 0px;
     }
 }
 
@@ -708,6 +730,38 @@ section {
   opacity:0;
 }
 
+.card-section span {
+  font-family: WorkSans-Light;
+  font-size: 24px;
+  color: #3C3C3D;
+  letter-spacing: 0;
+  display: inline-block;
+  margin-right: 20px;
+  padding-right: 30px;
+  background-repeat: no-repeat;
+  background-position: 100% 53%;
+}
+
+.bedrooms {
+  background-image: url('../img/icons/bed.svg');
+}
+
+.bathrooms {
+  background-image: url('../img/icons/bath.svg');
+}
+
+.parking {
+  background-image: url('../img/icons/car.svg');
+  background-position: 100% 65% !important;
+}
+
+.price {
+  font-family: WorkSans-Medium;
+  font-size: 18px;
+  color: #3C3C3D;
+  letter-spacing: 0;
+}
+
 #suburb-profile .panel {
 
 }
@@ -734,7 +788,7 @@ section {
 
 #profile-chart, #profile-chart-units-panel {
   @include clearfix;
-  padding: 15px;
+  padding: 0px;
   height: 600px;
   flex-direction: column;
   justify-content: center;
@@ -745,6 +799,7 @@ section {
 .data-table {
   background-color: $DARK_GREY;
   padding: 15px;
+  height: 90%;
 
   .table-row {
     display: flex;
@@ -819,15 +874,59 @@ section {
   margin-top: 15px;
   padding: 0px;
   height: 90%;
+  position: relative;
   @media screen and (min-width: 60em) {
+      margin-top: 0;
+      width: 49%;
+  }
+
+  @media screen and (min-width: 1200em) {
       margin-top: 0;
       padding: 0 0 0 15px;
   }
 }
 
 canvas#median-price-chart, canvas#median-price-chart-units {
-  padding: 15px;
+  padding: 15px 15px;
   background: #F7F7F7;
+  max-height: 500px !important;
+}
+
+.chart-heading {
+  background: $DARK_GREY;
+  color: #fff;
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  width:100%;
+}
+
+.chart-meta {
+  display: inline-block;
+  text-align: left;
+  font-family: WorkSans-Light;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #FFFFFF;
+  letter-spacing: 2px;
+}
+
+.chart-meta-title {
+  display: block;
+  font-family: WorkSans-Medium;
+}
+
+.chart-value {
+  display: inline-block;
+  position: absolute;
+  right:20px;
+  top:10px;
+  text-align: right;
+  font-family: WorkSans-ExtraLight;
+  font-size: 48px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  line-height: 1.3;
 }
 
 #the-process .row {

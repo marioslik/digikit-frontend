@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="22px" viewBox="0 0 24 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>ICON/Bath-Small</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="SYMBOLS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Property-Icons/Small" transform="translate(-22.000000, -2.000000)" stroke="#3C3C3D">
+            <g id="Property-Icons">
+                <g id="ICON/Bath-Small" transform="translate(23.000000, 3.000000)">
+                    <path d="M5,18 L5,20" id="Stroke-2552"></path>
+                    <path d="M17,18 L17,20" id="Stroke-2554"></path>
+                    <path d="M0,11 L0,13 C0,15.761 2.239,18 5,18 L17,18 C19.761,18 22,15.761 22,13 L22,11 L0,11 L0,11 Z" id="Stroke-2696"></path>
+                    <path d="M22,11 L22,3 C22,1.343 20.657,0 19,0 C17.343,0 16,1.343 16,3" id="Stroke-2697"></path>
+                    <path d="M19,6 L13,6 C13,4.343 14.343,3 16,3 C17.657,3 19,4.343 19,6 L19,6 Z" id="Stroke-2791"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

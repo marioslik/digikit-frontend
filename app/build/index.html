@@ -200,15 +200,15 @@
                         <a href="#" title="More">More</a>
                     </div>
                     <div id="card-rh-difference" class="icon-card">
-                        <h3>The Raine & Horne<br />difference</h3>
+                        <h3>The Raine & Horne difference</h3>
                         <a href="#" title="More">More</a>
                     </div>
                     <div id="card-what-pp-say" class="icon-card">
-                        <h3>What people say<br />about us</h3>
+                        <h3>What people say about us</h3>
                         <a href="#" title="More">More</a>
                     </div>
                     <div id="card-recognised" class="icon-card">
-                        <h3>It's nice to be<br />recognised</h3>
+                        <h3>It's nice to be recognised</h3>
                         <a href="#" title="More">More</a>
                     </div>
                     <div id="card-international" class="icon-card">
@@ -368,8 +368,8 @@
 
                 <div class="panels">
                     <div id="profile-chart-houses" class="panel">
-                        <div id="profile-chart">
-                            <div id="profile-chart-table" class="large-6 columns data-table">
+                        <div id="profile-chart" class="profile-chart">
+                            <div id="profile-chart-table" class="large-6 columns uncollapse data-table data-graph">
                                 <div class="table-row main-row" data-mainitem="1">
                                     <div class="item">Number of Sales</div>
                                     <div class="item">164</div>
@@ -401,15 +401,22 @@
                                 </div>
                             </div>
 
-                            <div id="profile-chart-graph" class="large-6 columns">
+                            <div id="profile-chart-graph" class="large-6 uncollapse columns data-graph">
                                 <canvas id="median-price-chart"></canvas>
+                                <div class="chart-heading">
+                                  <div class="chart-meta">
+                                    <span class="chart-meta-title">Median Price</span>
+                                    <span class="chart-meta-period">2013</span>
+                                  </div>
+                                  <span class="chart-value">$765,000</span>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <div id="profile-chart-units" class="panel">
-                        <div id="profile-chart-units-panel">
-                            <div id="profile-chart-table-units" class="large-6 columns data-table">
+                        <div id="profile-chart-units-panel" class="profile-chart">
+                            <div id="profile-chart-table-units" class="large-6 columns data-table data-graph">
                                 <div class="table-row main-row" data-mainitem="1">
                                     <div class="item">Number of Sales</div>
                                     <div class="item">244</div>
@@ -441,8 +448,15 @@
                                 </div>
                             </div>
 
-                            <div id="profile-chart-graph-units" class="large-6 columns">
+                            <div id="profile-chart-graph-units" class="large-6 columns data-graph">
                                 <canvas id="median-price-chart-units"></canvas>
+                                <div class="chart-heading">
+                                  <div class="chart-meta">
+                                    <span class="chart-meta-title">Median Price</span>
+                                    <span class="chart-meta-period">2013</span>
+                                  </div>
+                                  <span class="chart-value">$545,000</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -629,6 +643,9 @@
         <script src="js/vendor.min.js"></script>
         <script src="js/app.min.js"></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js'></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
 
 </body>
 
