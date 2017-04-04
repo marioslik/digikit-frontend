@@ -4,7 +4,6 @@ import gulp from 'gulp';
 import gutil from 'gulp-util';
 import sass from 'gulp-sass';
 import concat from 'gulp-concat';
-import notify from 'gulp-notify';
 import uglify from 'gulp-uglify';
 import plumber from 'gulp-plumber';
 import strip from 'gulp-strip-comments';
@@ -110,9 +109,7 @@ gulp.task('vendor-js', () => {
         .pipe(concat('vendor.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest(`./app/build/js/`))
-        .pipe(notify({
-            message: 'Finished minifying vendor JavaScript'
-        }));
+        ;
 })
 
 gulp.task('js', () => {
@@ -129,8 +126,6 @@ gulp.task('js', () => {
         .pipe(gulp.dest(`./app/build/js/`))
         .pipe(browserSync.reload({
             stream: true
-        })).pipe(notify({
-            message: 'Finished minifying app JavaScript'
         }));
 });
 

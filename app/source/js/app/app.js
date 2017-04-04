@@ -6,7 +6,7 @@ $(function() {
 
     var wrapper = $("#wrapper"),
         headerHeight = $('header').height(),
-        $menu = $("#nav-menu, #nav-header, #logo-section"),
+        $menu = $("#nav-menu, #nav-header, #logo-section, footer"),
         $window = $(window),
         sections = $('section'),
         nav = $('nav');
@@ -109,6 +109,33 @@ $(function() {
             className: "+=inactive"
         });
     });
+
+
+    /* Videos Grid */
+
+    //control video height
+
+    function videoHeight(){
+      $('#videos .flexcontainer').height($('.video-container iframe').height() + 20);
+    }
+
+    videoHeight();
+
+    $(window).resize(function(){
+      videoHeight();
+    });
+
+    //load videos
+    $('.video-thumb img').on('click', function(ev) {
+      var iframeUrl = $(this).attr('iframe-data');
+
+
+      $("#video")[0].src = iframeUrl;
+      $("#video")[0].src += "&autoplay=1";
+      ev.preventDefault();
+    });
+
+
 
 
     /* Scrollmagic - body content transitions on scroll */
@@ -352,7 +379,7 @@ $(function() {
     });
 
     scene6 = new ScrollMagic.Scene({
-      offset: $('#your-market').offset().top - 550,
+      offset: $('#your-market').offset().top - 500,
       duration: 400
     }).setTween(blockTween).addTo(scrollController);
 
@@ -365,7 +392,7 @@ $(function() {
     });
 
     scene7 = new ScrollMagic.Scene({
-      offset: $('#your-market').offset().top - 550,
+      offset: $('#your-market').offset().top - 500,
       duration: 400
     }).setTween(blockTween).addTo(scrollController);
 
@@ -522,7 +549,7 @@ $(function() {
     });
 
     scene9 = new ScrollMagic.Scene({
-      offset: $('#the-process').offset().top - 130,
+      offset: $('#the-process').offset().top - 230,
       duration: 500
     }).setTween(blockTween).addTo(scrollController);
 
@@ -535,7 +562,7 @@ $(function() {
     });
 
     scene9 = new ScrollMagic.Scene({
-      offset: $('#the-process').offset().top - 130,
+      offset: $('#the-process').offset().top - 230,
       duration: 500
     }).setTween(blockTween).addTo(scrollController);
 
@@ -630,6 +657,9 @@ $(function() {
             fillColor: "rgba(0,0,0,0.05)",
             strokeColor: "#45484D",
             pointColor: "#F7F7F7",
+            pointHighlightFill: "#FCB718",
+            pointHighlightStroke: "#FCB718",
+            pointHoverRadius: 20,
             pointStrokeColor: "#45484D",
             data: [650000, 679000, 720000, 765000, 810000, 860000, 974000]
         }]
@@ -641,10 +671,11 @@ $(function() {
 
     options = {
         responsive: true,
-        maintainAspectRatio: false,
-        pointDotRadius: 7,
+        maintainAspectRatio: true,
+        pointDotRadius: 6,
         bezierCurve: true,
         scaleShowLabels: false,
+        scaleOverride : false,
         scaleShowHorizontalLines: false,
         scaleShowVerticalLines: true,
         lineJoin: String,
@@ -657,9 +688,6 @@ $(function() {
 
     medianPrice = new Chart(ctx).Line(medianPriceData, options);
 
-
-
-
     var medianPriceUnits;
     var ctx2;
     var options2;
@@ -670,6 +698,9 @@ $(function() {
             fillColor: "rgba(0,0,0,0.05)",
             strokeColor: "#45484D",
             pointColor: "#F7F7F7",
+            pointHighlightFill: "#FCB718",
+            pointHighlightStroke: "#FCB718",
+            pointHoverRadius: 20,
             pointStrokeColor: "#45484D",
             data: [550000, 579000, 720000, 765000, 810000, 860000, 874000]
         }]
@@ -679,19 +710,20 @@ $(function() {
     // draw line chart
 
     options2 = {
-        responsive: true,
-        maintainAspectRatio: false,
-        pointDotRadius: 7,
-        bezierCurve: true,
-        scaleShowLabels: false,
-        scaleShowHorizontalLines: false,
-        scaleShowVerticalLines: true,
-        lineJoin: String,
-        scaleLineColor: 'transparent',
-        scaleGridLineColor: "#EBE9E9",
-        legend: {
-            fontSize: 40
-        }
+      responsive: true,
+      maintainAspectRatio: true,
+      pointDotRadius: 6,
+      bezierCurve: true,
+      scaleShowLabels: false,
+      scaleOverride : false,
+      scaleShowHorizontalLines: false,
+      scaleShowVerticalLines: true,
+      lineJoin: String,
+      scaleLineColor: 'transparent',
+      scaleGridLineColor: "#EBE9E9",
+      legend: {
+          fontSize: 40
+      }
     };
 
     medianPriceUnits = new Chart(ctx2).Line(medianPriceDataUnits, options2);
@@ -733,6 +765,23 @@ $(function() {
                 ease: Power1.easeInOut,
                 autoAlpha: 1
             });
+    });
+
+
+    /* Modal windows */
+
+    var modalTl = new TimelineMax();
+
+    TweenMax.set('.modal', {autoAlpha: 0, scale:0.8});
+
+    $('.modal-link').click(function() {
+        var modalId = $(this).attr('modal-id');
+        modalTl.to($("#" + modalId), 0.5, { ease: Power1.easeInOut, autoAlpha: 1, scale:1 });
+    });
+
+    $('.back-to-main, .modal-logo').click(function() {
+        modalTl.to('.modal', 0.5, {ease: Power1.easeInOut, autoAlpha: 0, x:-100})
+        .set('.modal', {x:0, scale:0.8});
     });
 
 

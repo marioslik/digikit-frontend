@@ -23,7 +23,7 @@ header {
     width: 100%;
     height: 75px;
     background: #fff;
-    z-index: 2;
+    z-index: 10000;
 }
 
 #main-nav {
@@ -33,10 +33,10 @@ header {
     right: 0;
     height: 100vh;
     background: rgba(60,60,60,0.95);
-    z-index: 3;
+    z-index: 10005;
     @media screen and (min-width: 40em) {
         width: 400px;
-        z-index: 3;
+        z-index: 10005;
     }
 }
 
@@ -229,27 +229,6 @@ header {
             font-size: 24px;
         }
     }
-
-    .btn-print {
-      width: auto !important;
-      background-position: 27% 50%;
-      transition: all 0.3s ease-in-out;
-
-      &:hover, &:focus {
-        box-shadow: none;
-        background-color: darken(#3C3C3D, 1.5);
-      }
-    }
-
-    .btn-share {
-      background: #3C3C3D url(../img/icons/share.svg) no-repeat 25% 50%;
-      transition: all 0.3s ease-in-out;
-
-      &:hover, &:focus {
-        box-shadow: none;
-        background-color: darken(#3C3C3D, 1.5);
-      }
-    }
 }
 /* Sections */
 .main-container {
@@ -258,7 +237,7 @@ header {
 }
 
 section {
-    padding: 65px 0;
+    padding: 75px 0;
 }
 
 .line {
@@ -427,37 +406,88 @@ section {
 }
 
 .flexcontainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: right;
-    width: 100%;
-    height: 200px;
-    padding: 10px;
+    display: block;
     @media screen and (min-width: 40em) {
-        height: 500px;
+        height: 400px;
         padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: right;
+        width: 100%;
+        padding: 10px;
     }
 }
 
 .single {
-    height: 100%;
-    flex: 0 0 65%;
-    background-color: $DARK_GREY;
+    display: block;
+    background-color: #000;
+    @media screen and (min-width: 40em) {
+        height: auto;
+        flex: 0 0 65%;
+        background-color: #000;
+    }
 }
 
 .two-row {
+    display: block;
     height: 100%;
-    flex: 0 0 35%;
-    padding: 0 0 0 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    padding: 0;
+
+    @media screen and (min-width: 40em) {
+      height: 100%;
+      flex: 0 0 35%;
+      padding: 0 0 0 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
 }
 
 .two-row.column > .one-row {
-    flex: 0 0 48%;
-    background-color: $DARK_GREY;
+    height: 48%;
+    margin: 7px 0px;
+    @media screen and (min-width: 40em) {
+      flex: 0 0 48%;
+      margin: 0px;
+    }
+}
+
+.video-container {
+  height: 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+
+  iframe,
+  object,
+  embed,
+  img {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.video-thumb {
+  overflow: hidden;
+  position: relative;
+}
+
+.video-thumb img {
+  object-fit: fill;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: auto;
+  width: 100%;
+  -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+  cursor:pointer;
 }
 
 #your-team {
@@ -801,6 +831,13 @@ section {
   padding: 15px;
   height: 90%;
 
+  @media screen and (min-width: 60em) {
+      margin-top: 0;
+      width: 49.5%;
+      height: 90%;
+  }
+
+
   .table-row {
     display: flex;
     flex-wrap: nowrap;
@@ -873,11 +910,14 @@ section {
 #profile-chart-graph , #profile-chart-graph-units{
   margin-top: 15px;
   padding: 0px;
-  height: 90%;
+  height: 100%;
   position: relative;
+  background: #F7F7F7;
+
   @media screen and (min-width: 60em) {
       margin-top: 0;
       width: 49%;
+      height: 90%;
   }
 
   @media screen and (min-width: 1200em) {
@@ -939,7 +979,7 @@ canvas#median-price-chart, canvas#median-price-chart-units {
 }
 
 #questions-feedback {
-  padding: 65px 0 150px 0;
+  padding: 100px 0 200px 0;
 }
 
 .form-intro {
@@ -977,72 +1017,201 @@ footer {
   }
 }
 
-.btn-accept {
-  display: block;
-  background: $BRAND_YELLOW;
-  box-shadow: 2px 5px 11px 0 rgba(0,0,0,0.20);
+
+
+
+/* Modal windows */
+
+.modal {
+  position: fixed;
+  top:0;
+  left: 0;
   width: 100%;
-  margin: 0 auto;
-  height: 110px;
-  text-align: center;
-  font-family: WorkSans-SemiBold;
-  text-transform: uppercase;
-  font-size: 24px;
-  color: #FFFFFF;
-  letter-spacing: 2px;
-  padding: 37px;
-  transition: all 0.25s ease-in-out;
-  position: absolute;
-  left:50%;
-  top:-110px;
-  margin-left: -50%;
+  height:100%;
+  background-color: #fff;
+  padding: 10px;
+  z-index: 20000;
+  overflow: scroll;
+  opacity: 0;
+  visibility: hidden;
 
   @media screen and (min-width: 40em) {
-    max-width: 424px;
-    margin-left: -222px;
-  }
-
-  &:hover, &:focus {
-    color: #FFFFFF;
-    box-shadow: 2px 5px 11px 0 rgba(0,0,0,0.50);
+    padding: 20px;
   }
 }
 
-.btn-print {
-  display: block;
-  width: 260px;
-  height: 80px;
-  font-family: WorkSans-Light;
-  font-size: 24px;
-  color: #FFFFFF;
-  letter-spacing: 0.8px;
-  text-align: center;
-  margin: 30px auto;
-  background: #3C3C3D url(../img/icons/print.svg) no-repeat 30% 50%;
-  padding: 20px 20px 20px 50px;
-  transition: all 0.2s ease-in-out;
+.modal-wrapper {
+  padding: 20px 10px;
 
-  &:hover, &:focus {
-    color: #FFFFFF;
-    box-shadow: 0px 1px 2px 2px rgba(0,0,0,0.1);
+  @media screen and (min-width: 40em) {
+    padding: 30px 15px;
   }
 }
 
-.btn-circ-arrow {
-  font-family: WorkSans-Medium;
-  font-size: 16px;
-  color: #3C3C3D;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-  padding: 12px 35px 12px 5px;
-  border-bottom: 2px solid $BRAND_YELLOW;
+.modal-header {
+  width:100%;
+  padding: 0px 20px 20px 20px;
   position: relative;
-  background: url(../img/icons/arrow-circle.svg) no-repeat 97% 50%;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
 
-  &:hover, &:focus {
-    padding-right: 35px;
-    background-position: 100% 50%;
+  @media screen and (min-width: 40em) {
+
+  }
+
+  .back-to-main {
+      display: inline-block;
+      position: absolute;
+      top: 4px;
+      left:0;
+      transition: all 0.2s ease-in-out;
+      width: 30px;
+
+      &:hover, &:focus {
+        left:-7px;
+      }
+
+      @media screen and (min-width: 40em) {
+        width: 38px;
+      }
+  }
+
+  .logo-compact {
+    position: relative;
+
+    svg {
+      width: 28px;
+
+      @media screen and (min-width: 40em){
+        width: 38px;
+      }
+
+      #Logo-Ampersand2 {
+        transition: all 0.2s ease-in-out;
+      }
+    }
+
+    &:hover svg #Logo-Ampersand2 {
+      fill:$DARK_GREY;
+    }
+
+    &::before {
+      content:"";
+      position: absolute;
+      right:37px;
+      width: 1px;
+      height: 100%;
+      background: #DDDBDB;
+
+      @media screen and (min-width: 40em){
+        right:60px;
+      }
+
+    }
+  }
+
+
+}
+
+.modal-header-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    @include clearfix;
+}
+
+.modal-name {
+  font-family: WorkSans-Medium;
+  font-size: 14px;
+  color: #666363;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: absolute;
+  right: 45px;
+  top: 9px;
+  display: block;
+  width: 200px;
+  text-align: right;
+
+  @media screen and (min-width: 40em){
+    font-size: 16px;
+    letter-spacing: 2px;
+    right: 80px;
+    top: 9px;
+    display: block;
+    width: 200px;
+    text-align: right;
+  }
+}
+
+
+
+.header-meta {
+  max-width: 80%;
+  float: right;
+  position: relative;
+}
+
+
+.modal-hero {
+  margin-top: 30px;
+  padding: 0 7px 7px 0;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border: 7px solid #EBE9E9;
+    width: 100%;
+    height: 100%;
+    border-top: none;
+    border-left: none;
+  }
+
+  @media screen and (min-width: 40em){
+    padding: 0 15px 15px 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 100px;
+      right: -100px;
+      width: 200px;
+      height: 2px;
+      background: $BRAND_YELLOW;
+      z-index: 3;
+    }
+  }
+
+  img {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.modal-content {
+  margin-top: 60px;
+  padding: 20px;
+
+  @media screen and (min-width: 60em) {
+    padding: 20px 100px;
+  }
+}
+
+.team-photos {
+  @include unlistNav;
+  margin: 40px 0;
+
+  li {
+    padding: 5px;
+    width: 48%;
+
+    @media screen and (min-width: 60em) {
+      width: 23%;
+    }
+  }
+
+  img {
+    width: 100%;
   }
 }
