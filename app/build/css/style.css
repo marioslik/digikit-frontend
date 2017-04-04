@@ -14,7 +14,7 @@
      * 3. Prevent adjustments of font size after orientation changes in
      *    IE on Windows Phone and in iOS.
      */
-@import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,700");
 html {
   font-family: sans-serif;
   /* 1 */
@@ -4951,7 +4951,8 @@ header {
       height: 110px;
       border-left: 1px solid rgba(60, 60, 60, 0.9);
       margin: 0;
-      font-family: WorkSans-Light;
+      font-family: "Work Sans", sans-serif;
+      font-weight: 300;
       font-size: 24px; }
 
 /* Sections */
@@ -4985,7 +4986,8 @@ section {
   transform-origin: left; }
 
 #hero h1 {
-  font-family: WorkSans-ExtraLight;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 200;
   font-size: 34px;
   color: #3C3C3D;
   letter-spacing: 1px;
@@ -5006,7 +5008,8 @@ section {
 #hero h3 {
   position: static;
   text-transform: uppercase;
-  font-family: WorkSans-Medium;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
   font-size: 14px;
   color: #3C3C3D;
   letter-spacing: 4px;
@@ -5255,7 +5258,8 @@ section {
       width: 30%;
       min-height: 340px; } }
   .icon-card h3 {
-    font-family: WorkSans-Light;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 200;
     font-size: 24px;
     color: #45484D;
     letter-spacing: 1px;
@@ -5264,7 +5268,8 @@ section {
     margin-top: 20px;
     padding-top: 140px; }
   .icon-card a {
-    font-family: WorkSans-Regular;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 400;
     font-size: 18px;
     color: #FCB718;
     letter-spacing: 2px;
@@ -5349,7 +5354,8 @@ section {
 
 #compare-property-nav li a, .tab-menu li a {
   display: block;
-  font-family: WorkSans-Regular;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
   font-size: 13px;
   color: #9B9797;
   letter-spacing: 0;
@@ -5403,7 +5409,8 @@ section {
   opacity: 0; }
 
 .card-section span {
-  font-family: WorkSans-Light;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
   font-size: 24px;
   color: #3C3C3D;
   letter-spacing: 0;
@@ -5424,7 +5431,8 @@ section {
   background-position: 100% 65% !important; }
 
 .price {
-  font-family: WorkSans-Medium;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
   font-size: 18px;
   color: #3C3C3D;
   letter-spacing: 0; }
@@ -5529,7 +5537,8 @@ canvas#median-price-chart, canvas#median-price-chart-units {
 .chart-meta {
   display: inline-block;
   text-align: left;
-  font-family: WorkSans-Light;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
   text-transform: uppercase;
   font-size: 14px;
   color: #FFFFFF;
@@ -5537,7 +5546,8 @@ canvas#median-price-chart, canvas#median-price-chart-units {
 
 .chart-meta-title {
   display: block;
-  font-family: WorkSans-Medium; }
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400; }
 
 .chart-value {
   display: inline-block;
@@ -5545,7 +5555,8 @@ canvas#median-price-chart, canvas#median-price-chart-units {
   right: 20px;
   top: 10px;
   text-align: right;
-  font-family: WorkSans-ExtraLight;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 200;
   font-size: 48px;
   color: #FFFFFF;
   letter-spacing: 0;
@@ -5565,7 +5576,8 @@ canvas#median-price-chart, canvas#median-price-chart-units {
   width: 70%;
   margin: 30px auto; }
   .form-intro p {
-    font-family: WorkSans-ExtraLight;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 200;
     font-size: 16px;
     color: #3C3C3D;
     letter-spacing: 0;
@@ -5657,7 +5669,8 @@ footer {
     clear: both; }
 
 .modal-name {
-  font-family: WorkSans-Medium;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
   font-size: 14px;
   color: #666363;
   letter-spacing: 1px;
@@ -5748,7 +5761,8 @@ button.submit {
   margin: 45px 0 30px 0; }
 
 h1 {
-  font-family: WorkSans-ExtraLight;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 200;
   font-size: 44px;
   color: #3C3C3D;
   letter-spacing: 1px;
@@ -5756,7 +5770,8 @@ h1 {
   margin-bottom: 30px; }
 
 h2 {
-  font-family: WorkSans-ExtraLight;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 200;
   font-size: 44px;
   color: #221F20;
   letter-spacing: 0.3px;
@@ -5765,7 +5780,8 @@ h2 {
   margin-bottom: 20px; }
 
 h4 {
-  font-family: WorkSans-Medium;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
   font-size: 16px;
   color: #221F20;
   letter-spacing: 2px;
@@ -5773,14 +5789,16 @@ h4 {
   margin-bottom: 30px; }
 
 p {
-  font-family: WorkSans-Light;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
   font-size: 16px;
   color: #666363;
   letter-spacing: 0;
   line-height: 32px; }
 
 .info-panel p {
-  font-family: WorkSans-Light;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
   font-size: 16px;
   color: #666363;
   letter-spacing: 0;
@@ -5791,7 +5809,8 @@ p {
   margin-bottom: 10px; }
 
 .agent-caption h5 {
-  font-family: WorkSans-Medium;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
   font-size: 18px;
   color: #FCB718;
   letter-spacing: 0;
@@ -5799,7 +5818,8 @@ p {
   margin-bottom: 10px; }
 
 .agent-caption p {
-  font-family: WorkSans-Light;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
   color: #45484D;
   line-height: 1;
   margin-bottom: 10px; }
@@ -5808,13 +5828,15 @@ p {
   margin-bottom: 30px; }
 
 #suburb-profile h2 {
-  font-family: WorkSans-Light;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
   font-size: 40px;
   color: #FCB718;
   letter-spacing: 0; }
 
 #suburb-profile h3 {
-  font-family: WorkSans-SemiBold;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
   text-transform: uppercase;
   font-size: 16px;
   color: #3C3C3D;
@@ -5822,7 +5844,8 @@ p {
   padding-left: 10px; }
 
 .btn-generic {
-  font-family: WorkSans-Regular;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
   font-size: 16px;
   color: #3C3C3D;
   letter-spacing: 0;
@@ -5843,7 +5866,8 @@ p {
   margin: 0 auto;
   height: 110px;
   text-align: center;
-  font-family: WorkSans-SemiBold;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
   text-transform: uppercase;
   font-size: 24px;
   color: #FFFFFF;
@@ -5866,7 +5890,8 @@ p {
   display: block;
   width: 260px;
   height: 80px;
-  font-family: WorkSans-Light;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
   font-size: 24px;
   color: #FFFFFF;
   letter-spacing: 0.8px;
@@ -5880,7 +5905,8 @@ p {
     box-shadow: 0px 1px 2px 2px rgba(0, 0, 0, 0.1); }
 
 .btn-circ-arrow {
-  font-family: WorkSans-Medium;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
   font-size: 16px;
   color: #3C3C3D;
   letter-spacing: 1.2px;
@@ -5896,7 +5922,8 @@ p {
     background-position: 100% 50%; }
 
 .btn-arrow {
-  font-family: WorkSans-Medium;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
   font-size: 16px;
   color: #3C3C3D;
   padding: 4px 33px 5px 5px;

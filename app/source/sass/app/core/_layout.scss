@@ -225,7 +225,8 @@ header {
             height: 110px;
             border-left: 1px solid rgba(60,60,60,0.9);
             margin: 0;
-            font-family: WorkSans-Light;
+            font-family: "Work Sans", sans-serif;
+            font-weight: 300;
             font-size: 24px;
         }
     }
@@ -267,7 +268,8 @@ section {
     }
 
     h1 {
-        font-family: WorkSans-ExtraLight;
+        font-family: "Work Sans", sans-serif;
+        font-weight: 200;
         font-size: 34px;
         color: #3C3C3D;
         letter-spacing: 1px;
@@ -289,7 +291,8 @@ section {
     h3 {
         position: static;
         text-transform: uppercase;
-        font-family: WorkSans-Medium;
+        font-family: "Work Sans", sans-serif;
+        font-weight: 400;
         font-size: 14px;
         color: #3C3C3D;
         letter-spacing: 4px;
@@ -579,7 +582,8 @@ section {
     }
 
     h3 {
-        font-family: WorkSans-Light;
+        font-family: "Work Sans", sans-serif;
+        font-weight: 200;
         font-size: 24px;
         color: $DARK_GREY;
         letter-spacing: 1px;
@@ -590,7 +594,8 @@ section {
     }
 
     a {
-        font-family: WorkSans-Regular;
+        font-family: "Work Sans", sans-serif;
+        font-weight: 400;
         font-size: 18px;
         color: $BRAND_YELLOW;
         letter-spacing: 2px;
@@ -697,7 +702,8 @@ section {
 
 #compare-property-nav li a, .tab-menu li a {
   display: block;
-  font-family: WorkSans-Regular;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
   font-size: 13px;
   color: #9B9797;
   letter-spacing: 0;
@@ -761,7 +767,8 @@ section {
 }
 
 .card-section span {
-  font-family: WorkSans-Light;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
   font-size: 24px;
   color: #3C3C3D;
   letter-spacing: 0;
@@ -786,7 +793,8 @@ section {
 }
 
 .price {
-  font-family: WorkSans-Medium;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
   font-size: 18px;
   color: #3C3C3D;
   letter-spacing: 0;
@@ -944,7 +952,8 @@ canvas#median-price-chart, canvas#median-price-chart-units {
 .chart-meta {
   display: inline-block;
   text-align: left;
-  font-family: WorkSans-Light;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
   text-transform: uppercase;
   font-size: 14px;
   color: #FFFFFF;
@@ -953,7 +962,8 @@ canvas#median-price-chart, canvas#median-price-chart-units {
 
 .chart-meta-title {
   display: block;
-  font-family: WorkSans-Medium;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
 }
 
 .chart-value {
@@ -962,7 +972,8 @@ canvas#median-price-chart, canvas#median-price-chart-units {
   right:20px;
   top:10px;
   text-align: right;
-  font-family: WorkSans-ExtraLight;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 200;
   font-size: 48px;
   color: #FFFFFF;
   letter-spacing: 0;
@@ -987,7 +998,8 @@ canvas#median-price-chart, canvas#median-price-chart-units {
     margin: 30px auto;
 
     p {
-      font-family: WorkSans-ExtraLight;
+      font-family: "Work Sans", sans-serif;
+      font-weight: 200;
       font-size: 16px;
       color: #3C3C3D;
       letter-spacing: 0;
@@ -1119,7 +1131,8 @@ footer {
 }
 
 .modal-name {
-  font-family: WorkSans-Medium;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
   font-size: 14px;
   color: #666363;
   letter-spacing: 1px;
