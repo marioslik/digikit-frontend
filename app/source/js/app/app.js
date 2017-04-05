@@ -56,6 +56,7 @@ $(function() {
 
         $menu.on("click", "a", function() {
             var $this = $(this),
+                theOthers = $('#nav-menu a').not($this),
                 href = $this.attr("href"),
                 topY = $(href).offset().top - headerHeight,
                 menuTl = new TimelineMax();
@@ -66,9 +67,12 @@ $(function() {
                     autoKill: true
                 },
                 ease: Power2.easeInOut
-            }).call(closeNav, [], this, "0.5");
-            $('#nav-menu a').removeClass('active');
-            $this.addClass('active');
+            })
+            .set(theOthers, {className:"-=active"}, "+=0.25")
+            .set($this, {className:"+=active"}, "+=0.0")
+            .call(closeNav, [], this, "-=0.2")
+            ;
+
             return false;
         });
 
@@ -204,7 +208,7 @@ $(function() {
 
     resourcesTween = new TimelineMax();
     resourcesTween.from('#resources h2', 1, { ease:Power1.easeInOut, x:-100, alpha:0 })
-               .staggerFrom('#resources .icon-card', 1, { ease:Power1.easeInOut, x:100, alpha:0 }, 0.15, "-=1")
+               .staggerFrom('#resources .icon-card', 1, { ease:Power1.easeInOut, y:75, alpha:0 }, 0.15, "-=1")
     ;
 
     scene3 = new ScrollMagic.Scene({
@@ -235,174 +239,75 @@ $(function() {
 
 
     /* Compare your property section ScrollMagic */
-    //
-    // blockTween = new TweenMax.from('#compare-property h2', 1.25, {
-    //   ease:Power1.easeInOut,
-    //    css: {
-    //      transform: 'translateX(-250px)',
-    //      alpha:0
-    //    }
-    // });
-    //
-    // scene7 = new ScrollMagic.Scene({
-    //   offset: $('#compare-property').offset().top - 750,
-    //   duration: 400
-    // }).setTween(blockTween).addTo(scrollController);
-    //
-    // blockTween = new TweenMax.from('#compare-property-nav', 1.25, {
-    //   ease:Power1.easeInOut,
-    //    css: {
-    //      transform: 'translateX(250px)',
-    //      alpha:0
-    //    }
-    // });
-    //
-    // scene7 = new ScrollMagic.Scene({
-    //   offset: $('#compare-property').offset().top - 750,
-    //   duration: 400
-    // }).setTween(blockTween).addTo(scrollController);
-    //
-    //
-    // blockTween = new TweenMax.staggerFrom('#compare-property .panels .panel .card', 1.25, {
-    //   ease:Power1.easeInOut,
-    //    css: {
-    //      transform: 'translateY(75px)',
-    //      alpha:0
-    //    },
-    //    delay:0.25
-    // }, 0.5);
-    //
-    // scene7 = new ScrollMagic.Scene({
-    //   offset: $('#compare-property').offset().top - 750,
-    //   duration: 500
-    // }).setTween(blockTween).addTo(scrollController);
-    //
-    //
-    // /* Your suburb profile section ScrollMagic */
-    //
-    // blockTween = new TweenMax.from('#suburb-profile h3', 1.25, {
-    //   ease:Power1.easeInOut,
-    //    css: {
-    //      transform: 'translateX(-350px)',
-    //      alpha:0
-    //    }
-    // });
-    //
-    // scene8 = new ScrollMagic.Scene({
-    //   offset: $('#suburb-profile').offset().top - 750,
-    //   duration: 400
-    // }).setTween(blockTween).addTo(scrollController);
-    //
-    // blockTween = new TweenMax.from('#suburb-profile h2', 1.25, {
-    //   ease:Power1.easeInOut,
-    //    css: {
-    //      transform: 'translateX(-250px)',
-    //      alpha:0
-    //    }
-    // });
-    //
-    // scene8 = new ScrollMagic.Scene({
-    //   offset: $('#suburb-profile').offset().top - 750,
-    //   duration: 400
-    // }).setTween(blockTween).addTo(scrollController);
-    //
-    // blockTween = new TweenMax.from('#suburb-profile-nav', 1.25, {
-    //   ease:Power1.easeInOut,
-    //    css: {
-    //      transform: 'translateX(250px)',
-    //      alpha:0
-    //    }
-    // });
-    //
-    // scene8 = new ScrollMagic.Scene({
-    //   offset: $('#suburb-profile').offset().top - 750,
-    //   duration: 400
-    // }).setTween(blockTween).addTo(scrollController);
-    //
-    // blockTween = new TweenMax.staggerFrom('#suburb-profile .panels .panel .data-graph', 1.25, {
-    //   ease:Power1.easeInOut,
-    //    css: {
-    //      transform: 'translateY(150px)',
-    //      alpha:0
-    //    }
-    // }, 0.25);
-    //
-    // scene8 = new ScrollMagic.Scene({
-    //   offset: $('#suburb-profile').offset().top - 750,
-    //   duration: 400
-    // }).setTween(blockTween).addTo(scrollController);
-    //
-    //
-    // /* The process section ScrollMagic */
-    //
-    // blockTween = new TweenMax.from('#the-process h2', 1.25, {
-    //   ease:Power1.easeInOut,
-    //    css: {
-    //      transform: 'translateX(-200px)',
-    //      alpha:0
-    //    }
-    // });
-    //
-    // scene9 = new ScrollMagic.Scene({
-    //   offset: $('#suburb-profile').offset().top - 50,
-    //   duration: 500
-    // }).setTween(blockTween).addTo(scrollController);
-    //
-    //
-    // blockTween = new TweenMax.from('#the-process-nav', 1.25, {
-    //   ease:Power1.easeInOut,
-    //    css: {
-    //      transform: 'translateX(200px)',
-    //      alpha:0
-    //    }
-    // });
-    //
-    // scene9 = new ScrollMagic.Scene({
-    //   offset: $('#suburb-profile').offset().top - 50,
-    //   duration: 500
-    // }).setTween(blockTween).addTo(scrollController);
-    //
-    //
-    // blockTween = new TweenMax.staggerFrom('#the-process .panel .icon-card', 1.25, {
-    //   ease:Power1.easeInOut,
-    //    css: {
-    //      transform: 'translateX(200px)',
-    //      alpha:0
-    //    }
-    // }, 0.15);
-    //
-    // scene9 = new ScrollMagic.Scene({
-    //   offset: $('#suburb-profile').offset().top + 30,
-    //   duration: 500
-    // }).setTween(blockTween).addTo(scrollController);
-    //
-    // /* Feedback and footer sections ScrollMagic */
-    //
-    // blockTween = new TweenMax.from('.form-container', 1.25, {
-    //   ease:Power1.easeInOut,
-    //    css: {
-    //      transform: 'translateY(100px)',
-    //      alpha:0
-    //    }
-    // });
-    //
-    // scene9 = new ScrollMagic.Scene({
-    //   offset: $('#the-process').offset().top - 230,
-    //   duration: 500
-    // }).setTween(blockTween).addTo(scrollController);
-    //
-    // blockTween = new TweenMax.from('.form-container .form-intro', 1.25, {
-    //   ease:Power1.easeInOut,
-    //    css: {
-    //      transform: 'translateX(-100px)',
-    //      alpha:0
-    //    }
-    // });
-    //
-    // scene9 = new ScrollMagic.Scene({
-    //   offset: $('#the-process').offset().top - 230,
-    //   duration: 500
-    // }).setTween(blockTween).addTo(scrollController);
+
+    compareTween = new TimelineMax();
+    compareTween.from('#compare-property h2', 1, { ease:Power1.easeInOut, x:-100, alpha:0 })
+                .from('#compare-property-nav', 1, { ease:Power1.easeInOut, x:100, alpha:0 }, "-=1")
+               .staggerFrom('#compare-property .panels .panel .card', 1, { ease:Power1.easeInOut, y:75, alpha:0 }, 0.15, "-=1")
+    ;
+
+    scene5 = new ScrollMagic.Scene({
+      triggerElement: '#compare-property',
+      offset: 50,
+      reverse:false
+    })
+    .setTween(compareTween)
+    .addTo(scrollController);
+    //scene5.addIndicators();
+
+
+    /* Your suburb profile section ScrollMagic */
+
+    suburbProfileTween = new TimelineMax();
+    suburbProfileTween.from('#suburb-profile h3', 1, { ease:Power1.easeInOut, x:-100, alpha:0 })
+                .from('#suburb-profile h2', 1, { ease:Power1.easeInOut, x:-100, alpha:0 }, "-=0.9")
+                .from('#suburb-profile-nav', 1, { ease:Power1.easeInOut, x:100, alpha:0 }, "-=1")
+    ;
+
+    scene6 = new ScrollMagic.Scene({
+      triggerElement: '#suburb-profile',
+      offset: 50,
+      reverse:false
+    })
+    .setTween(suburbProfileTween)
+    .addTo(scrollController);
+    //scene6.addIndicators();
+
+
+    /* The process section ScrollMagic */
+
+    processTween = new TimelineMax();
+    processTween.from('#the-process h2', 1, { ease:Power1.easeInOut, x:-100, alpha:0 })
+                .from('#the-process-nav', 1, { ease:Power1.easeInOut, x:100, alpha:0 }, "-=1")
+               .staggerFrom('#the-process .panel .icon-card', 1, { ease:Power1.easeInOut, y:75, alpha:0 }, 0.15, "-=1")
+    ;
+
+    scene7 = new ScrollMagic.Scene({
+      triggerElement: '#the-process',
+      offset: 50,
+      reverse:false
+    })
+    .setTween(processTween)
+    .addTo(scrollController);
+    //scene7.addIndicators();
+
+
+    /* Feedback section ScrollMagic */
+
+    feedbackTween = new TimelineMax();
+    feedbackTween.from('.form-container', 1, { ease:Power1.easeInOut, x:-100, alpha:0 })
+
+    ;
+
+    scene8 = new ScrollMagic.Scene({
+      triggerElement: '#questions-feedback',
+      offset: 30,
+      reverse:false
+    })
+    .setTween(feedbackTween)
+    .addTo(scrollController);
+    //scene8.addIndicators();
+
 
 
     /* Compare your property panels */

@@ -4922,7 +4922,8 @@ header {
       #logo-section .property-address {
         display: inline-block;
         font-size: 19px;
-        top: -6px; } }
+        top: -6px;
+        margin-left: 15px; } }
 
 #nav-toggle {
   position: absolute;
@@ -5300,7 +5301,7 @@ section {
     text-transform: uppercase;
     line-height: 20px;
     position: absolute;
-    bottom: 20px;
+    bottom: 30px;
     left: 0;
     width: 100%;
     text-align: center; }
