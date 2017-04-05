@@ -722,10 +722,10 @@ $(function() {
         var top;
         if (tooltip.yAlign == 'above') {
             //top = tooltip.y - tooltip.caretHeight - tooltip.caretPadding;
-            top = 10;
+            top = 7;
         } else {
             //top = tooltip.y + tooltip.caretHeight + tooltip.caretPadding;
-            top = 10;
+            top = 7;
         }
         // Display, position, and set styles for font
         tooltipEl1.css({
@@ -734,8 +734,8 @@ $(function() {
             top: tooltip.chart.canvas.offsetTop + top + 'px',
             fontFamily: tooltip.fontFamily,
             fontSize: 48,
-            fontStyle: tooltip.fontStyle,
-            transition: "all 0.5s ease-in-out"
+            fontWeight: 200,
+            lineHeight: 1.3
         });
 
         tooltipEl2.css({
@@ -744,8 +744,7 @@ $(function() {
             top: tooltip.chart.canvas.offsetTop + top + 'px',
             fontFamily: tooltip.fontFamily,
             fontSize: 14,
-            fontStyle: tooltip.fontStyle,
-            transition: "all 0.5s ease-in-out"
+            fontStyle: tooltip.fontStyle
         });
 
 

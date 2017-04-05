@@ -5541,6 +5541,7 @@ canvas#median-price-chart, canvas#median-price-chart-units {
   font-weight: 300;
   text-transform: uppercase;
   font-size: 14px;
+  line-height: 1.3;
   color: #FFFFFF;
   letter-spacing: 2px; }
 
@@ -5553,7 +5554,7 @@ canvas#median-price-chart, canvas#median-price-chart-units {
   display: inline-block;
   position: absolute;
   right: 20px !important;
-  top: 10px;
+  top: 8px;
   text-align: right;
   font-family: "Work Sans", sans-serif;
   font-weight: 200;
