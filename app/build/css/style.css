@@ -4779,6 +4779,10 @@ a.thumbnail image {
 * {
   box-sizing: border-box; }
 
+body {
+  margin: 0;
+  padding: 0; }
+
 .light-grey {
   background-color: #F7F7F7; }
 
@@ -4792,12 +4796,20 @@ a.thumbnail image {
 
 /* Header */
 header {
-  padding: 15px 20px;
   position: fixed;
+  display: block;
+  padding: 15px 20px;
   width: 100%;
   height: 75px;
+  right: auto;
+  left: auto;
   background: #fff;
   z-index: 10000; }
+
+#nav-wrapper:after {
+  content: "";
+  display: table;
+  clear: both; }
 
 #main-nav {
   position: fixed;
@@ -4850,11 +4862,15 @@ header {
   padding: 20px; }
   #nav-menu a {
     color: #DDDBDB;
-    font-size: 24px;
-    padding: 16px 0px;
+    font-size: 16px;
+    padding: 10px 0px;
     transition: 0.3s ease-in-out;
     display: inline-block;
     position: relative; }
+    @media screen and (min-width: 40em) {
+      #nav-menu a {
+        font-size: 24px;
+        padding: 16px 0px; } }
     #nav-menu a:hover, #nav-menu a:focus {
       color: #FFFFFF; }
     #nav-menu a::after {
@@ -4932,7 +4948,8 @@ header {
     width: 100%;
     display: block;
     font-size: 0;
-    position: relative; }
+    position: relative;
+    background: #454545; }
   #nav-utilities .menu li {
     font-size: 16px;
     text-align: center;
@@ -4946,14 +4963,18 @@ header {
       right: -2px; }
     #nav-utilities .menu li a {
       color: #fff;
-      padding: 40px 10px 40px 50px;
+      padding: 20px 10px 20px 50px;
       border-left: 1px solid rgba(60, 60, 60, 0.9);
-      height: 110px;
+      height: 70px;
       border-left: 1px solid rgba(60, 60, 60, 0.9);
       margin: 0;
       font-family: "Work Sans", sans-serif;
       font-weight: 300;
       font-size: 24px; }
+      @media screen and (min-width: 40em) {
+        #nav-utilities .menu li a {
+          padding: 40px 10px 40px 50px;
+          height: 110px; } }
 
 /* Sections */
 .main-container {
@@ -5068,7 +5089,7 @@ section {
         left: 43%; } }
 
 .agent-photo {
-  padding-left: 0;
+  padding: 0;
   z-index: 3; }
   .agent-photo img {
     width: 100%; }
@@ -5076,7 +5097,7 @@ section {
     .agent-photo {
       position: absolute;
       top: 70px;
-      width: 45%; } }
+      width: 44%; } }
   @media screen and (min-width: 1250px) {
     .agent-photo {
       width: 40%; } }
@@ -5233,8 +5254,10 @@ section {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  max-width: 80%;
   margin: 50px auto; }
+  @media screen and (min-width: 40em) {
+    .card-container {
+      max-width: 80%; } }
   .card-container h3 {
     background-repeat: no-repeat;
     background-position: 50% 0%; }
@@ -5242,16 +5265,17 @@ section {
 .icon-card {
   background: #fff;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-  width: 90%;
+  width: 100%;
   min-height: 400px;
-  margin: 5px;
+  margin: 5px 0px;
   position: relative;
   padding: 25px; }
   @media screen and (min-width: 40em) {
     .icon-card {
       min-width: auto;
       width: 45%;
-      min-height: 340px; } }
+      min-height: 340px;
+      margin: 5px; } }
   @media screen and (min-width: 60em) {
     .icon-card {
       min-width: 235px;
@@ -5327,6 +5351,12 @@ section {
   @media screen and (min-width: 1200em) {
     .market-panel {
       right: 0px; } }
+
+#suburb-profile {
+  padding: 75px 0 145px 0; }
+  @media screen and (min-width: 40em) {
+    #suburb-profile {
+      padding: 75px 0; } }
 
 #compare-property .row, #suburb-profile .row {
   position: relative; }
@@ -5453,7 +5483,7 @@ section {
 /* Suburb stats/profile */
 #profile-chart, #profile-chart-units-panel {
   padding: 0px;
-  height: 600px;
+  height: auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -5462,6 +5492,9 @@ section {
     content: "";
     display: table;
     clear: both; }
+  @media screen and (min-width: 40em) {
+    #profile-chart, #profile-chart-units-panel {
+      height: 600px; } }
 
 .data-table {
   background-color: #45484D;
@@ -5477,7 +5510,10 @@ section {
     flex-wrap: nowrap;
     justify-content: space-between;
     align-content: stretch;
-    padding: 15px; }
+    padding: 5px 0px; }
+    @media screen and (min-width: 40em) {
+      .data-table .table-row {
+        padding: 15px; } }
     .data-table .table-row.header-row .item {
       flex-grow: 2;
       color: #fff; }
@@ -5531,8 +5567,11 @@ canvas#median-price-chart, canvas#median-price-chart-units {
   color: #fff;
   padding: 20px;
   position: absolute;
-  bottom: 0;
+  bottom: -70px;
   width: 100%; }
+  @media screen and (min-width: 60em) {
+    .chart-heading {
+      bottom: 0; } }
 
 .chart-meta {
   display: inline-block;
@@ -5540,10 +5579,13 @@ canvas#median-price-chart, canvas#median-price-chart-units {
   font-family: "Work Sans", sans-serif;
   font-weight: 300;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 11px;
   line-height: 1.3;
   color: #FFFFFF;
   letter-spacing: 2px; }
+  @media screen and (min-width: 40em) {
+    .chart-meta {
+      font-size: 14px; } }
 
 .chart-meta-title {
   display: block;
@@ -5554,14 +5596,18 @@ canvas#median-price-chart, canvas#median-price-chart-units {
   display: inline-block;
   position: absolute;
   right: 20px !important;
-  top: 8px;
+  top: 14px;
   text-align: right;
   font-family: "Work Sans", sans-serif;
   font-weight: 200;
-  font-size: 48px;
+  font-size: 30px;
   color: #FFFFFF;
   letter-spacing: 0;
   line-height: 1.3; }
+  @media screen and (min-width: 40em) {
+    .chart-value {
+      font-size: 48px;
+      top: 8px; } }
 
 #the-process .row {
   position: relative; }
@@ -5574,8 +5620,12 @@ canvas#median-price-chart, canvas#median-price-chart-units {
   padding: 100px 0 200px 0; }
 
 .form-intro {
-  width: 70%;
+  width: 100%;
   margin: 30px auto; }
+  @media screen and (min-width: 40em) {
+    .form-intro {
+      margin: 30px auto;
+      width: 70%; } }
   .form-intro p {
     font-family: "Work Sans", sans-serif;
     font-weight: 200;
@@ -5592,20 +5642,21 @@ footer {
   footer .logo {
     display: block;
     text-align: center;
-    width: 325px;
-    height: 40px;
+    max-width: 200px;
     margin: 60px auto 30px auto; }
+    @media screen and (min-width: 40em) {
+      footer .logo {
+        width: 325px; } }
     footer .logo svg {
-      width: 325px;
-      height: 40px; }
+      width: 100%; }
 
 /* Modal windows */
 .modal {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
   height: 100%;
+  width: 100%;
   background-color: #fff;
   padding: 10px;
   z-index: 20000;
@@ -5728,8 +5779,10 @@ footer {
     margin: 0 auto; }
 
 .modal-content {
-  margin-top: 60px;
-  padding: 20px; }
+  margin-top: 60px; }
+  @media screen and (min-width: 60em) {
+    .modal-content {
+      padding: 20px; } }
   @media screen and (min-width: 60em) {
     .modal-content {
       padding: 20px 100px; } }
@@ -5938,7 +5991,8 @@ p {
     background-position: 100% 50%; }
 
 .btn-back-arrow {
-  font-family: WorkSans-Medium;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
   font-size: 16px;
   color: #3C3C3D;
   padding: 4px 5px 5px 33px;

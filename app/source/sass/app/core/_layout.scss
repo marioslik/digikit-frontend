@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .light-grey {
     background-color: $LIGHT_GREY;
 }
@@ -18,12 +23,19 @@
 
 /* Header */
 header {
-    padding: 15px 20px;
     position: fixed;
+    display: block;
+    padding: 15px 20px;
     width: 100%;
     height: 75px;
+    right: auto;
+    left: auto;
     background: #fff;
     z-index: 10000;
+}
+
+#nav-wrapper {
+  @include clearfix;
 }
 
 #main-nav {
@@ -86,11 +98,16 @@ header {
 
     a {
         color: #DDDBDB;
-        font-size: 24px;
-        padding: 16px 0px;
+        font-size: 16px;
+        padding: 10px 0px;
         transition: 0.3s ease-in-out;
         display: inline-block;
         position: relative;
+
+        @media screen and (min-width: 40em) {
+          font-size: 24px;
+          padding: 16px 0px;
+        }
 
         &:hover, &:focus {
           color:#FFFFFF;
@@ -202,6 +219,7 @@ header {
         display: block;
         font-size: 0;
         position: relative;
+        background: #454545;
     }
 
     .menu li {
@@ -220,14 +238,19 @@ header {
 
         a {
             color: #fff;
-            padding: 40px 10px 40px 50px;
+            padding: 20px 10px 20px 50px;
             border-left: 1px solid rgba(60, 60, 60, 0.9);
-            height: 110px;
+            height: 70px;
             border-left: 1px solid rgba(60,60,60,0.9);
             margin: 0;
             font-family: "Work Sans", sans-serif;
             font-weight: 300;
             font-size: 24px;
+
+            @media screen and (min-width: 40em) {
+              padding: 40px 10px 40px 50px;
+              height: 110px;
+            }
         }
     }
 }
@@ -360,7 +383,7 @@ section {
 }
 
 .agent-photo {
-      padding-left: 0;
+      padding: 0;
       z-index: 3;
     img {
         width: 100%;
@@ -368,7 +391,7 @@ section {
     @media screen and (min-width: 40em) {
         position: absolute;
         top: 70px;
-        width: 45%;
+        width: 44%;
     }
     @media screen and (min-width: 1250px) {
         width: 40%;
@@ -551,8 +574,12 @@ section {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    max-width: 80%;
+
     margin: 50px auto;
+
+    @media screen and (min-width: 40em) {
+      max-width: 80%;
+    }
 
     h3 {
         background-repeat: no-repeat;;
@@ -563,9 +590,9 @@ section {
 .icon-card {
     background: #fff;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
-    width: 90%;
+    width: 100%;
     min-height: 400px;
-    margin: 5px;
+    margin: 5px 0px;
     position: relative;
     padding: 25px;
 
@@ -573,6 +600,7 @@ section {
         min-width: auto;
         width: 45%;
         min-height: 340px;
+        margin: 5px;
     }
 
     @media screen and (min-width: 60em) {
@@ -668,6 +696,16 @@ section {
     @media screen and (min-width: 1200em) {
         right: 0px;
     }
+}
+
+#suburb-profile {
+  padding: 75px 0 145px 0;
+
+  @media screen and (min-width: 40em) {
+    padding: 75px 0;
+  }
+
+
 }
 
 #compare-property .row, #suburb-profile .row {
@@ -827,11 +865,16 @@ section {
 #profile-chart, #profile-chart-units-panel {
   @include clearfix;
   padding: 0px;
-  height: 600px;
+  height: auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+
+  @media screen and (min-width: 40em) {
+    height: 600px;
+  }
+
 }
 
 .data-table {
@@ -851,7 +894,14 @@ section {
     flex-wrap: nowrap;
     justify-content: space-between;
     align-content: stretch;
-    padding: 15px;
+    padding: 5px 0px;
+
+
+    @media screen and (min-width: 40em) {
+      padding: 15px;
+    }
+
+
 
     &.header-row {
       //background-color: $primaryColor;
@@ -945,8 +995,12 @@ canvas#median-price-chart, canvas#median-price-chart-units {
   color: #fff;
   padding: 20px;
   position: absolute;
-  bottom: 0;
+  bottom: -70px;
   width:100%;
+
+  @media screen and (min-width: 60em) {
+    bottom: 0;
+  }
 }
 
 .chart-meta {
@@ -955,10 +1009,14 @@ canvas#median-price-chart, canvas#median-price-chart-units {
   font-family: "Work Sans", sans-serif;
   font-weight: 300;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 11px;
   line-height: 1.3;
   color: #FFFFFF;
   letter-spacing: 2px;
+
+  @media screen and (min-width: 40em) {
+    font-size: 14px;
+  }
 }
 
 .chart-meta-title {
@@ -971,14 +1029,19 @@ canvas#median-price-chart, canvas#median-price-chart-units {
   display: inline-block;
   position: absolute;
   right:20px !important;
-  top:8px;
+  top:14px;
   text-align: right;
   font-family: "Work Sans", sans-serif;
   font-weight: 200;
-  font-size: 48px;
+  font-size: 30px;
   color: #FFFFFF;
   letter-spacing: 0;
   line-height: 1.3;
+
+  @media screen and (min-width: 40em) {
+    font-size: 48px;
+    top:8px;
+  }
 }
 
 #the-process .row {
@@ -995,8 +1058,13 @@ canvas#median-price-chart, canvas#median-price-chart-units {
 }
 
 .form-intro {
-    width: 70%;
+    width: 100%;
     margin: 30px auto;
+
+    @media screen and (min-width: 40em){
+      margin: 30px auto;
+      width: 70%;
+    }
 
     p {
       font-family: "Work Sans", sans-serif;
@@ -1019,13 +1087,15 @@ footer {
   .logo {
     display: block;
     text-align: center;
-    width: 325px;
-    height:40px;
+    max-width: 200px;
     margin: 60px auto 30px auto;
 
-    svg {
+    @media screen and (min-width: 40em){
       width: 325px;
-      height:40px;
+    }
+
+    svg {
+      width: 100%;
     }
   }
 }
@@ -1039,8 +1109,9 @@ footer {
   position: fixed;
   top:0;
   left: 0;
-  width: 100%;
+  //right:0;
   height:100%;
+  width: 100%;
   background-color: #fff;
   padding: 10px;
   z-index: 20000;
@@ -1205,7 +1276,10 @@ footer {
 
 .modal-content {
   margin-top: 60px;
-  padding: 20px;
+
+  @media screen and (min-width: 60em) {
+    padding: 20px;
+  }
 
   @media screen and (min-width: 60em) {
     padding: 20px 100px;
