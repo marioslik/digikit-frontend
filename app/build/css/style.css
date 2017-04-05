@@ -5552,7 +5552,7 @@ canvas#median-price-chart, canvas#median-price-chart-units {
 .chart-value {
   display: inline-block;
   position: absolute;
-  right: 20px;
+  right: 20px !important;
   top: 10px;
   text-align: right;
   font-family: "Work Sans", sans-serif;

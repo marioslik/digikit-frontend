@@ -646,7 +646,14 @@ $(function() {
             });
     });
 
+    /* Convert chart values to currency */
 
+    function currencyFormat (num) {
+        return "$" + parseFloat(num).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+    }
+
+    console.info(currencyFormat(2665));   // $2,665.00
+    console.info(currencyFormat(102665)); // $102,665.00
 
     var medianPrice;
     var ctx;
@@ -661,11 +668,88 @@ $(function() {
             pointHighlightStroke: "#FCB718",
             pointHoverRadius: 20,
             pointStrokeColor: "#45484D",
-            data: [650000, 679000, 720000, 765000, 810000, 860000, 974000]
+            data: [650000, 679000, 720000, 765000, 810000, 860000, 979000]
         }]
     };
 
     ctx = document.getElementById('median-price-chart').getContext('2d');
+    Chart.defaults.global.customTooltips = function(tooltip) {
+      // Tooltip Element
+        var tooltipEl1 = $('.chart-value');
+        var tooltipEl2 = $('.chart-meta-period');
+
+
+
+        // Hide if no tooltip
+        if (!tooltip) {
+            tooltipEl1.css({
+                opacity: 1
+            });
+            return;
+        }
+
+        if (!tooltip) {
+            tooltipEl2.css({
+                opacity: 1
+            });
+            return;
+        }
+
+        var splitTooltip = tooltip.text.split(":");
+
+
+
+        // Set caret Position
+        tooltipEl1.removeClass('above below');
+        tooltipEl1.addClass(tooltip.yAlign);
+
+        tooltipEl2.removeClass('above below');
+        tooltipEl2.addClass(tooltip.yAlign);
+        // Set Text
+        //var chartValue = tooltipEl1.html(splitTooltip[1]);
+
+        var chartValue = splitTooltip[1];
+        tooltipEl2.html(splitTooltip[0]);
+
+        var chartValueString = chartValue.toString();
+
+        var chartValueCurrency = currencyFormat(chartValueString);
+
+        tooltipEl1.html(chartValueCurrency);
+
+
+        // Find Y Location on page
+        var top;
+        if (tooltip.yAlign == 'above') {
+            //top = tooltip.y - tooltip.caretHeight - tooltip.caretPadding;
+            top = 10;
+        } else {
+            //top = tooltip.y + tooltip.caretHeight + tooltip.caretPadding;
+            top = 10;
+        }
+        // Display, position, and set styles for font
+        tooltipEl1.css({
+            opacity: 1,
+            left: tooltip.chart.canvas.offsetRight + tooltip.x + 'px',
+            top: tooltip.chart.canvas.offsetTop + top + 'px',
+            fontFamily: tooltip.fontFamily,
+            fontSize: 48,
+            fontStyle: tooltip.fontStyle,
+            transition: "all 0.5s ease-in-out"
+        });
+
+        tooltipEl2.css({
+            opacity: 1,
+            left: tooltip.chart.canvas.offsetRight + tooltip.x + 'px',
+            top: tooltip.chart.canvas.offsetTop + top + 'px',
+            fontFamily: tooltip.fontFamily,
+            fontSize: 14,
+            fontStyle: tooltip.fontStyle,
+            transition: "all 0.5s ease-in-out"
+        });
+
+
+    };
 
     // draw line chart
 
@@ -681,9 +765,7 @@ $(function() {
         lineJoin: String,
         scaleLineColor: 'transparent',
         scaleGridLineColor: "#EBE9E9",
-        legend: {
-            fontSize: 40
-        }
+        scaleLabel: function(label){return label.value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");}
     };
 
     medianPrice = new Chart(ctx).Line(medianPriceData, options);
