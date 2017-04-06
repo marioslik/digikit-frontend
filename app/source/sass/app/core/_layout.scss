@@ -502,6 +502,32 @@ section {
 .video-thumb {
   overflow: hidden;
   position: relative;
+  cursor: pointer;
+}
+
+.thumb-overlay {
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+
+  span {
+    color:#fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: Work Sans;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+    letter-spacing: 1.6px;
+    display: block;
+    width: 100%;
+    position: absolute;
+    top:50%;
+    margin-top: -12px;
+  }
 }
 
 .video-thumb img {
@@ -638,24 +664,48 @@ section {
     }
 }
 
-#card-office-profile > h3 {
+.card-office-profile h3 {
     background-image: url('../img/icons/suit-and-tie.svg');
 }
 
-#card-rh-difference > h3 {
+.card-rh-difference h3 {
     background-image: url('../img/icons/logo-ampersand.svg');
 }
 
-#card-what-pp-say h3 {
+.card-what-pp-say h3 {
     background-image: url('../img/icons/speech-bubble.svg');
 }
 
-#card-recognised h3 {
+.card-recognised h3 {
     background-image: url('../img/icons/award.svg');
 }
 
-#card-international h3 {
+.card-international h3 {
     background-image: url('../img/icons/globe.svg');
+}
+
+.card-method-of-sale h3 {
+    background-image: url('../img/icons/gavel.svg');
+}
+
+.card-marketing h3 {
+    background-image: url('../img/icons/hand-holding.svg');
+}
+
+.card-maximising h3 {
+    background-image: url('../img/icons/gold-bullion.svg');
+}
+
+.card-what-you-can-expect h3 {
+    background-image: url('../img/icons/hand-holding.svg');
+}
+
+.card-stand-out h3 {
+    background-image: url('../img/icons/suit-and-tie.svg');
+}
+
+.card-sales-process h3 {
+    background-image: url('../img/icons/sales-process.svg');
 }
 
 
@@ -803,6 +853,10 @@ section {
 .panel {
   display: none;
   opacity:0;
+
+  .column:last-child:not(:first-child), .columns:last-child:not(:first-child) {
+      float: left;
+  }
 }
 
 .card-section span {
@@ -837,10 +891,6 @@ section {
   font-size: 18px;
   color: #3C3C3D;
   letter-spacing: 0;
-}
-
-#suburb-profile .panel {
-
 }
 
 #profile-chart-units {
@@ -985,10 +1035,20 @@ section {
   }
 }
 
+.data-graph {
+  @media screen and (min-width: 60em) {
+    float: right !important;
+  }
+}
+
 canvas#median-price-chart, canvas#median-price-chart-units {
   padding: 15px 15px;
   background: #F7F7F7;
   max-height: 500px !important;
+
+  @media screen and (min-width: 60em) {
+    max-width: 588px;
+  }
 }
 
 .chart-heading {
@@ -1284,6 +1344,11 @@ footer {
 
   @media screen and (min-width: 60em) {
     padding: 20px 100px;
+  }
+
+  .back-to-main {
+    margin-top: 45px;
+    display: inline-block;
   }
 }
 

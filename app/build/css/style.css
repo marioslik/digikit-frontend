@@ -5194,7 +5194,30 @@ section {
 
 .video-thumb {
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  cursor: pointer; }
+
+.thumb-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); }
+  .thumb-overlay span {
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: Work Sans;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+    letter-spacing: 1.6px;
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    margin-top: -12px; }
 
 .video-thumb img {
   object-fit: fill;
@@ -5306,20 +5329,38 @@ section {
     width: 100%;
     text-align: center; }
 
-#card-office-profile > h3 {
+.card-office-profile h3 {
   background-image: url("../img/icons/suit-and-tie.svg"); }
 
-#card-rh-difference > h3 {
+.card-rh-difference h3 {
   background-image: url("../img/icons/logo-ampersand.svg"); }
 
-#card-what-pp-say h3 {
+.card-what-pp-say h3 {
   background-image: url("../img/icons/speech-bubble.svg"); }
 
-#card-recognised h3 {
+.card-recognised h3 {
   background-image: url("../img/icons/award.svg"); }
 
-#card-international h3 {
+.card-international h3 {
   background-image: url("../img/icons/globe.svg"); }
+
+.card-method-of-sale h3 {
+  background-image: url("../img/icons/gavel.svg"); }
+
+.card-marketing h3 {
+  background-image: url("../img/icons/hand-holding.svg"); }
+
+.card-maximising h3 {
+  background-image: url("../img/icons/gold-bullion.svg"); }
+
+.card-what-you-can-expect h3 {
+  background-image: url("../img/icons/hand-holding.svg"); }
+
+.card-stand-out h3 {
+  background-image: url("../img/icons/suit-and-tie.svg"); }
+
+.card-sales-process h3 {
+  background-image: url("../img/icons/sales-process.svg"); }
 
 .market-map {
   padding: 0;
@@ -5438,6 +5479,8 @@ section {
 .panel {
   display: none;
   opacity: 0; }
+  .panel .column:last-child:not(:first-child), .panel .columns:last-child:not(:first-child) {
+    float: left; }
 
 .card-section span {
   font-family: "Work Sans", sans-serif;
@@ -5558,10 +5601,17 @@ section {
       margin-top: 0;
       padding: 0 0 0 15px; } }
 
+@media screen and (min-width: 60em) {
+  .data-graph {
+    float: right !important; } }
+
 canvas#median-price-chart, canvas#median-price-chart-units {
   padding: 15px 15px;
   background: #F7F7F7;
   max-height: 500px !important; }
+  @media screen and (min-width: 60em) {
+    canvas#median-price-chart, canvas#median-price-chart-units {
+      max-width: 588px; } }
 
 .chart-heading {
   background: #45484D;
@@ -5787,6 +5837,9 @@ footer {
   @media screen and (min-width: 60em) {
     .modal-content {
       padding: 20px 100px; } }
+  .modal-content .back-to-main {
+    margin-top: 45px;
+    display: inline-block; }
 
 .team-photos {
   list-style: none;
@@ -5891,12 +5944,19 @@ p {
 
 #suburb-profile h3 {
   font-family: "Work Sans", sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   text-transform: uppercase;
   font-size: 16px;
   color: #3C3C3D;
   letter-spacing: 0;
   padding-left: 10px; }
+
+.modal h3 {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin: 45px 0px 20px 0; }
 
 .btn-generic {
   font-family: "Work Sans", sans-serif;
@@ -5916,7 +5976,7 @@ p {
 .btn-accept {
   display: block;
   background: #FCB718;
-  box-shadow: 2px 5px 11px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 5px 11px 0 rgba(0, 0, 0, 0.05);
   width: 100%;
   margin: 0 auto;
   height: 110px;
@@ -5939,7 +5999,9 @@ p {
       margin-left: -222px; } }
   .btn-accept:hover, .btn-accept:focus {
     color: #FFFFFF;
-    box-shadow: 2px 5px 11px 0 rgba(0, 0, 0, 0.5); }
+    box-shadow: 0px 10px 35px 3px rgba(0, 0, 0, 0.3);
+    border: none;
+    outline: none; }
 
 .btn-print {
   display: block;
@@ -5957,7 +6019,9 @@ p {
   transition: all 0.2s ease-in-out; }
   .btn-print:hover, .btn-print:focus {
     color: #FFFFFF;
-    box-shadow: 0px 1px 2px 2px rgba(0, 0, 0, 0.1); }
+    background-color: #323233;
+    border: none;
+    outline: none; }
 
 .btn-circ-arrow {
   font-family: "Work Sans", sans-serif;

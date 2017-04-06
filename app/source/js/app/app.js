@@ -54,6 +54,15 @@ $(function() {
           });
         }
 
+        function closeNavOnMouseOut() {
+          var mainNav = $('#main-nav');
+          if(mainNav.is(":hover")) {
+            TweenMax.set(mainNav, {className: "active"});
+          } else {
+            closeNav();
+          }
+        }
+
         $menu.on("click", "a", function() {
             var $this = $(this),
                 theOthers = $('#nav-menu a').not($this),
@@ -70,7 +79,8 @@ $(function() {
             })
             .set(theOthers, {className:"-=active"}, "+=0.25")
             .set($this, {className:"+=active"}, "+=0.0")
-            .call(closeNav, [], this, "-=0.2")
+
+            .call(closeNavOnMouseOut, [], this, "-=0.2")
             ;
 
             return false;
@@ -150,7 +160,7 @@ $(function() {
     });
 
     //load videos
-    $('.video-thumb img').on('click', function(ev) {
+    $('.video-thumb').on('click', function(ev) {
       var iframeUrl = $(this).attr('iframe-data');
 
 
@@ -262,11 +272,12 @@ $(function() {
     suburbProfileTween.from('#suburb-profile h3', 1, { ease:Power1.easeInOut, x:-100, alpha:0 })
                 .from('#suburb-profile h2', 1, { ease:Power1.easeInOut, x:-100, alpha:0 }, "-=0.9")
                 .from('#suburb-profile-nav', 1, { ease:Power1.easeInOut, x:100, alpha:0 }, "-=1")
+                .call(drawChart, [], "-=1")
     ;
 
     scene6 = new ScrollMagic.Scene({
       triggerElement: '#suburb-profile',
-      offset: 50,
+      offset: 200,
       reverse:false
     })
     .setTween(suburbProfileTween)
@@ -284,7 +295,7 @@ $(function() {
 
     scene7 = new ScrollMagic.Scene({
       triggerElement: '#the-process',
-      offset: 50,
+      offset: 100,
       reverse:false
     })
     .setTween(processTween)
@@ -295,7 +306,7 @@ $(function() {
     /* Feedback section ScrollMagic */
 
     feedbackTween = new TimelineMax();
-    feedbackTween.from('.form-container', 1, { ease:Power1.easeInOut, x:-100, alpha:0 })
+    feedbackTween.from('.form-container', 1, { ease:Power1.easeInOut, x:100, alpha:0 })
 
     ;
 
@@ -394,9 +405,6 @@ $(function() {
     function currencyFormat (num) {
         return "$" + parseFloat(num).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
     }
-
-    console.info(currencyFormat(2665));   // $2,665.00
-    console.info(currencyFormat(102665)); // $102,665.00
 
     var medianPrice;
     var ctx;
@@ -510,7 +518,11 @@ $(function() {
         scaleLabel: function(label){return label.value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");}
     };
 
-    medianPrice = new Chart(ctx).Line(medianPriceData, options);
+    function drawChart(){
+      medianPrice = new Chart(ctx).Line(medianPriceData, options);
+    }
+
+    // medianPrice = new Chart(ctx).Line(medianPriceData, options);
 
     var medianPriceUnits;
     var ctx2;
@@ -599,6 +611,7 @@ $(function() {
     TweenMax.set('.modal', {autoAlpha: 0, width:"100%", scale:0.8});
 
     $('.modal-link').click(function() {
+        console.log('modal link');
         var modalId = $(this).attr('modal-id');
         modalTl.to($("#" + modalId), 0.5, { ease: Power1.easeInOut, autoAlpha: 1, scale:1 });
     });
