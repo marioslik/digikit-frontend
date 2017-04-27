@@ -279,7 +279,6 @@ $(function() {
     suburbProfileTween = new TimelineMax();
     suburbProfileTween.from('#suburb-profile h3', 1, { ease:Power1.easeInOut, x:-100, alpha:0 })
                 .from('#suburb-profile h2', 1, { ease:Power1.easeInOut, x:-100, alpha:0 }, "-=0.9")
-                .from('#suburb-profile-nav', 1, { ease:Power1.easeInOut, x:100, alpha:0 }, "-=1")
                 .call(drawChart, [], "-=1")
     ;
 

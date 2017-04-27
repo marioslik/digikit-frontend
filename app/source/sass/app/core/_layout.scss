@@ -657,6 +657,44 @@ section {
     }
 }
 
+#your-market {
+  padding-top: 0;
+
+  @media screen and (min-width: 40em) {
+    padding-top: 75px;
+  }
+
+  .row {
+      position: relative;
+      padding: 0;
+
+      @media screen and (min-width: 40em) {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+  }
+
+  .market-panel {
+      float: none;
+      padding: 15px;
+
+      @media screen and (min-width: 40em) {
+          padding: 200px 80px 80px;
+          position: relative;
+          z-index: 0;
+          top: -160px;
+          float: right !important;
+          right: 0px;
+      }
+
+      @media screen and (min-width: 1200em) {
+          right: 0px;
+      }
+  }
+}
+
+
+
 .card-container {
     display: flex;
     flex-direction: row;
@@ -805,21 +843,7 @@ section {
     }
 }
 
-.market-panel {
-    float: none;
-    @media screen and (min-width: 40em) {
-        padding: 200px 80px 80px;
-        position: relative;
-        z-index: 0;
-        top: -160px;
-        float: right !important;
-        right: 0px;
-    }
 
-    @media screen and (min-width: 1200em) {
-        right: 0px;
-    }
-}
 
 #suburb-profile {
   padding: 75px 0 145px 0;
@@ -1242,7 +1266,18 @@ canvas#median-price-chart, canvas#median-price-chart-units {
 }
 
 #questions-feedback {
-  padding: 100px 0 200px 0;
+  padding: 0px 0 200px 0;
+
+  @media screen and (min-width: 40em) {
+    padding: 100px 0 200px 0;
+  }
+
+  .row {
+    padding: 0;
+    @media screen and (min-width: 40em) {
+      padding: 0 15px 0 15px;
+    }
+  }
 }
 
 .form-intro {
@@ -1254,6 +1289,15 @@ canvas#median-price-chart, canvas#median-price-chart-units {
       width: 70%;
     }
 
+    h2 {
+      text-align: left;
+      padding-left: 0;
+
+      @media screen and (min-width: 40em){
+        text-align: center;
+      }
+    }
+
     p {
       font-family: "Work Sans", sans-serif;
       font-weight: 200;
@@ -1261,6 +1305,11 @@ canvas#median-price-chart, canvas#median-price-chart-units {
       color: #3C3C3D;
       letter-spacing: 0;
       line-height: 1.6;
+      text-align: left;
+
+      @media screen and (min-width: 40em){
+        text-align: center;
+      }
     }
 }
 

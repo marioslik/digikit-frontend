@@ -1,5 +1,23 @@
-#feedbackForm input, #feedbackForm textarea {
+#feedbackForm input {
   border: 0px !important;
+}
+
+#feedbackForm textarea {
+  background-color: #FAFAFA;
+  border: 1px solid #DDDBDB;
+
+  @media screen and (min-width: 40em) {
+    background-color: #ffffff;
+    border: 0px !important;
+  }
+}
+
+.form-container {
+  background-color: #ffffff;
+
+  @media screen and (min-width: 40em) {
+    background-color: $LIGHT_GREY;
+  }
 }
 
 #feedbackForm textarea {

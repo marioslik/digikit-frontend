@@ -5469,6 +5469,33 @@ section {
       top: -160px;
       float: left !important; } }
 
+#your-market {
+  padding-top: 0; }
+  @media screen and (min-width: 40em) {
+    #your-market {
+      padding-top: 75px; } }
+  #your-market .row {
+    position: relative;
+    padding: 0; }
+    @media screen and (min-width: 40em) {
+      #your-market .row {
+        padding-left: 15px;
+        padding-right: 15px; } }
+  #your-market .market-panel {
+    float: none;
+    padding: 15px; }
+    @media screen and (min-width: 40em) {
+      #your-market .market-panel {
+        padding: 200px 80px 80px;
+        position: relative;
+        z-index: 0;
+        top: -160px;
+        float: right !important;
+        right: 0px; } }
+    @media screen and (min-width: 1200em) {
+      #your-market .market-panel {
+        right: 0px; } }
+
 .card-container {
   display: flex;
   flex-direction: row;
@@ -5593,20 +5620,6 @@ section {
     @media screen and (min-width: 40em) {
       .market-map img {
         width: auto; } }
-
-.market-panel {
-  float: none; }
-  @media screen and (min-width: 40em) {
-    .market-panel {
-      padding: 200px 80px 80px;
-      position: relative;
-      z-index: 0;
-      top: -160px;
-      float: right !important;
-      right: 0px; } }
-  @media screen and (min-width: 1200em) {
-    .market-panel {
-      right: 0px; } }
 
 #suburb-profile {
   padding: 75px 0 145px 0; }
@@ -5928,7 +5941,15 @@ canvas#median-price-chart, canvas#median-price-chart-units {
   text-align: center; }
 
 #questions-feedback {
-  padding: 100px 0 200px 0; }
+  padding: 0px 0 200px 0; }
+  @media screen and (min-width: 40em) {
+    #questions-feedback {
+      padding: 100px 0 200px 0; } }
+  #questions-feedback .row {
+    padding: 0; }
+    @media screen and (min-width: 40em) {
+      #questions-feedback .row {
+        padding: 0 15px 0 15px; } }
 
 .form-intro {
   width: 100%;
@@ -5937,13 +5958,23 @@ canvas#median-price-chart, canvas#median-price-chart-units {
     .form-intro {
       margin: 30px auto;
       width: 70%; } }
+  .form-intro h2 {
+    text-align: left;
+    padding-left: 0; }
+    @media screen and (min-width: 40em) {
+      .form-intro h2 {
+        text-align: center; } }
   .form-intro p {
     font-family: "Work Sans", sans-serif;
     font-weight: 200;
     font-size: 16px;
     color: #3C3C3D;
     letter-spacing: 0;
-    line-height: 1.6; }
+    line-height: 1.6;
+    text-align: left; }
+    @media screen and (min-width: 40em) {
+      .form-intro p {
+        text-align: center; } }
 
 footer {
   background: #45484D;
@@ -6115,8 +6146,22 @@ footer {
   .team-photos img {
     width: 100%; }
 
-#feedbackForm input, #feedbackForm textarea {
+#feedbackForm input {
   border: 0px !important; }
+
+#feedbackForm textarea {
+  background-color: #FAFAFA;
+  border: 1px solid #DDDBDB; }
+  @media screen and (min-width: 40em) {
+    #feedbackForm textarea {
+      background-color: #ffffff;
+      border: 0px !important; } }
+
+.form-container {
+  background-color: #ffffff; }
+  @media screen and (min-width: 40em) {
+    .form-container {
+      background-color: #F7F7F7; } }
 
 #feedbackForm textarea {
   height: 245px;
@@ -6296,7 +6341,8 @@ p {
     color: #FFFFFF;
     box-shadow: 0px 10px 35px 3px rgba(0, 0, 0, 0.3);
     border: none;
-    outline: none; }
+    outline: none;
+    transform: scale(1.02); }
 
 .btn-print {
   display: block;
