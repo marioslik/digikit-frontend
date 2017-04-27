@@ -32,6 +32,7 @@ header {
     left: auto;
     background: #fff;
     z-index: 10000;
+    box-shadow: 0 0 14px 0 rgba(0,0,0,0.20);
 }
 
 #nav-wrapper {
@@ -160,8 +161,8 @@ header {
         display: inline-block;
 
         svg {
-            width: 150px;
-            height: 26px;
+            width: 160px;
+            height: 41px;
             @media screen and (min-width: 40em) {
                 width: 204px;
                 height: 36px;
@@ -175,6 +176,7 @@ header {
         position: relative;
         top: 0;
         font-size: 16px;
+        display: none;
         @media screen and (min-width: 40em) {
             display: inline-block;
             font-size: 19px;
@@ -277,12 +279,24 @@ section {
 }
 
 #hero {
+    background-color: #ffffff;
+    padding-top: 0px;
+    padding-bottom: 30px;
+
     @media screen and (min-width: 40em) {
+        padding-top: 75px;
         padding-bottom: 85px;
+        background-color: $LIGHT_GREY;
     }
 
     .row {
         position: relative;
+        padding: 0;
+
+        @media screen and (min-width: 40em) {
+          padding-left: 15px;
+          padding-right: 15px;
+        }
     }
 
     .line {
@@ -299,9 +313,12 @@ section {
         letter-spacing: 1px;
         line-height: 1.1;
         background: #fff;
-        padding: 30px;
+        padding: 0px;
         display: block;
         width: 100%;
+        text-align: center;
+        padding: 0px 15px;
+
         @media screen and (min-width: 40em) {
             font-size: 54px;
             line-height: 56px;
@@ -309,6 +326,7 @@ section {
             width: 580px;
             margin-top: -8%;
             padding: 20px;
+            text-align: left;
         }
     }
 
@@ -322,12 +340,19 @@ section {
         letter-spacing: 4px;
         margin-top: 20px;
         padding: 5px 30px;
+        text-align: center;
+
         @media screen and (min-width: 40em) {
             font-size: 21px;
             position: absolute;
-            right: 0;
-            padding: none;
-            margin-top: 0;
+            right: 20px;
+            padding: 0px;
+            margin-top: 120px;
+            text-align: left;
+        }
+
+        @media screen and (min-width: 60em) {
+            margin-top: 80px;
         }
     }
 
@@ -344,6 +369,7 @@ section {
 
 #agent-profile {
     position: relative;
+    padding-top: 25px;
     @media screen and (min-width: 40em) {
         padding: 130px 0;
     }
@@ -386,6 +412,9 @@ section {
 .agent-photo {
       padding: 0;
       z-index: 3;
+      width: 80%;
+      margin: 0 auto;
+      float: none;
     img {
         width: 100%;
     }
@@ -393,6 +422,7 @@ section {
         position: absolute;
         top: 70px;
         width: 44%;
+        float: left;
     }
     @media screen and (min-width: 1250px) {
         width: 40%;
@@ -415,12 +445,22 @@ section {
 }
 
 .agent-caption {
-    text-align: right;
+    text-align: center;
     padding: 20px 0;
+
+    @media screen and (min-width: 40em) {
+      text-align: right;
+    }
 }
 
 .info-panel {
-    padding: 30px;
+    padding: 0px;
+    background-color: #ffffff;
+
+    @media screen and (min-width: 40em) {
+        padding: 30px;
+        background-color: $LIGHT_GREY;
+    }
 }
 
 .agent-info {
@@ -430,6 +470,13 @@ section {
     @media screen and (min-width: 64em) {
         padding-left: 22%;
     }
+}
+
+#videos {
+  background-color: $LIGHT_GREY;
+  @media screen and (min-width: 40em) {
+      background-color: #ffffff;
+  }
 }
 
 .flexcontainer {
@@ -545,21 +592,32 @@ section {
 
 #your-team {
     position: static;
+    padding-top: 0px;
 
     &:after {
         content: "";
         display: table;
         clear: both;
     }
+
+    @media screen and (min-width: 40em) {
+      padding-top: 75px;
+    }
 }
 
 #your-team .row {
     position: relative;
+    padding: 0;
 
     &:after {
         content: "";
         display: table;
         clear: both;
+    }
+
+    @media screen and (min-width: 40em) {
+      padding-left: 15px;
+      padding-right: 15px;
     }
 }
 
@@ -586,8 +644,12 @@ section {
 
 .team-panel {
     float: none;
+    padding-right: 15px;
+    padding-left: 15px;
     @media screen and (min-width: 40em) {
         padding-right: 120px;
+        padding-left: 35px;
+        padding-bottom: 45px;
         position: relative;
         z-index: 0;
         top: -160px;
@@ -601,11 +663,13 @@ section {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
 
     margin: 50px auto;
 
     @media screen and (min-width: 40em) {
       max-width: 80%;
+      box-shadow: none !important;
     }
 
     h3 {
@@ -616,18 +680,22 @@ section {
 
 .icon-card {
     background: #fff;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
     width: 100%;
-    min-height: 400px;
-    margin: 5px 0px;
+    margin: 0px;
     position: relative;
-    padding: 25px;
+    padding: 20px 25px;
+    box-shadow: none;
+    border-bottom: 1px solid #eee;
+    min-height: 112px;
 
     @media screen and (min-width: 40em) {
         min-width: auto;
         width: 45%;
         min-height: 340px;
+        margin: 5px 0px;
         margin: 5px;
+        padding: 25px;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
     }
 
     @media screen and (min-width: 60em) {
@@ -636,16 +704,55 @@ section {
         min-height: 340px;
     }
 
+    .card-icon {
+        display: inline-block;
+        margin: 0px auto;
+        width: 50px;
+        position: absolute;
+        left:25px;
+        top:50%;
+        transform: translateY(-50%);
+
+        @media screen and (min-width: 40em) {
+          position: static;
+          display: block;
+          margin: 10px auto;
+          width: auto;
+          transform: none;
+        }
+    }
+
     h3 {
         font-family: "Work Sans", sans-serif;
         font-weight: 200;
-        font-size: 24px;
-        color: $DARK_GREY;
+        font-size: 18px;
+        color: #45484D;
         letter-spacing: 1px;
-        text-align: center;
-        line-height: 28px;
-        margin-top: 20px;
-        padding-top: 140px;
+        line-height: 1.2;
+        margin-left: 70px;
+        display: inline-block;
+        width: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @media screen and (min-width: 40em) {
+            text-align: center;
+            width: 100%;
+            left:0;
+            line-height: 28px;
+            padding: 30px;
+            padding-top: 0px;
+            font-size: 24px;
+            display: block;
+            margin-left: 0;
+            top: 60%;
+            text-align: center;
+        }
+
+        @media screen and (min-width: 60em) {
+            padding-top: 20px;
+        }
     }
 
     a {
@@ -655,60 +762,25 @@ section {
         color: $BRAND_YELLOW;
         letter-spacing: 2px;
         text-transform: uppercase;
-        line-height: 20px;
+        line-height: 2;
         position: absolute;
-        bottom: 30px;
-        left:0;
-        width: 100%;
-        text-align: center;
+        bottom: 50%;
+        transform: translateY(50%);
+        right:30px;
+        display: block;
+        width: 40px;
+        height: 40px;
+        text-align: right;
+
+        @media screen and (min-width: 40em) {
+          bottom: 30px;
+          left:0;
+          width: 100%;
+          height: auto;
+          text-align: center;
+        }
     }
 }
-
-.card-office-profile h3 {
-    background-image: url('../img/icons/suit-and-tie.svg');
-}
-
-.card-rh-difference h3 {
-    background-image: url('../img/icons/logo-ampersand.svg');
-}
-
-.card-what-pp-say h3 {
-    background-image: url('../img/icons/speech-bubble.svg');
-}
-
-.card-recognised h3 {
-    background-image: url('../img/icons/award.svg');
-}
-
-.card-international h3 {
-    background-image: url('../img/icons/globe.svg');
-}
-
-.card-method-of-sale h3 {
-    background-image: url('../img/icons/gavel.svg');
-}
-
-.card-marketing h3 {
-    background-image: url('../img/icons/hand-holding.svg');
-}
-
-.card-maximising h3 {
-    background-image: url('../img/icons/gold-bullion.svg');
-}
-
-.card-what-you-can-expect h3 {
-    background-image: url('../img/icons/hand-holding.svg');
-}
-
-.card-stand-out h3 {
-    background-image: url('../img/icons/suit-and-tie.svg');
-}
-
-.card-sales-process h3 {
-    background-image: url('../img/icons/sales-process.svg');
-}
-
-
 
 .market-map {
     padding: 0;
@@ -789,6 +861,44 @@ section {
   }
 }
 
+#suburb-profile-nav {
+  @media screen and (max-width: 39.999999em) {
+    margin-bottom: 0;
+  }
+
+  ul {
+    @media screen and (max-width: 39.999999em) {
+      background-color: #333434;
+      margin-bottom: 0;
+      text-align: right;
+      padding: 15px 15px 0px 0px;
+    }
+  }
+
+  li {
+    margin-right: 15px;
+  }
+
+  a {
+    @media screen and (max-width: 39.999999em) {
+      padding-bottom: 15px;
+      color: #fff;
+    }
+  }
+}
+
+#the-process-nav.tab-menu ul li {
+  @media screen and (max-width: 39.999999em) {
+    width: 19%;
+    text-align: center;
+    margin: 0 6px;
+    line-height: 1.3;
+  }
+  margin: 0 15px;
+
+
+}
+
 #compare-property-nav li a, .tab-menu li a {
   display: block;
   font-family: "Work Sans", sans-serif;
@@ -853,6 +963,7 @@ section {
 .panel {
   display: none;
   opacity:0;
+  @include clearfix;
 
   .column:last-child:not(:first-child), .columns:last-child:not(:first-child) {
       float: left;
@@ -891,6 +1002,15 @@ section {
   font-size: 18px;
   color: #3C3C3D;
   letter-spacing: 0;
+  margin: 3px 0px 0px 0px;
+}
+
+.address {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: #3C3C3D;
+  letter-spacing: 0;
 }
 
 #profile-chart-units {
@@ -905,10 +1025,17 @@ section {
 
 .card {
   border: none;
+  margin-bottom: 30px;
 
   img {
     width: 100%;
   }
+}
+
+.bx-wrapper {
+  background: none;
+  box-shadow: none;
+  border: none;
 }
 
 /* Suburb stats/profile */

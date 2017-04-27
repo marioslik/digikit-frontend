@@ -104,7 +104,7 @@ const argv = require('yargs').argv;
 
 gulp.task('vendor-js', () => {
     gulp.src([
-            './app/source/js/vendor/*.js'
+            './app/source/js/vendor/**/*.js'
         ])
         .pipe(concat('vendor.min.js'))
         .pipe(uglify())

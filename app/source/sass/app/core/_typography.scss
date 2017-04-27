@@ -12,13 +12,19 @@ h1 {
 
 h2 {
     font-family: "Work Sans", sans-serif;
-    font-weight: 200;
-    font-size: 44px;
-    color: #221F20;
+    font-weight: 300;
+    font-size: 30px;
+    color: #3C3C3D;
     letter-spacing: 0.3px;
     padding-left: 10px;
     line-height: 1;
     margin-bottom: 20px;
+
+    @media screen and (min-width: 40em) {
+      font-size: 44px;
+      color: #221F20;
+      font-weight: 200;
+    }
 }
 
 h4 {
@@ -51,9 +57,28 @@ p {
     }
 
     h2 {
+      margin-top: 30px;
+      text-align: center;
       padding-left: 0;
-      margin-bottom: 10px;
+
+      @media screen and (min-width: 40em) {
+        padding-left: 0;
+        margin-bottom: 10px;
+        margin-top: 0;
+        text-align: left;
+      }
     }
+
+    h4 {
+      text-align: center;
+      @media screen and (min-width: 40em) {
+        text-align: left;
+      }
+    }
+}
+
+.agent-info h2 {
+  font-size: 44px;
 }
 
 .agent-caption {
@@ -76,9 +101,31 @@ p {
     }
 }
 
+#your-team {
+  .info-panel h4 {
+    text-transform: none;
+    text-align: left;
+    font-size: 30px;
+    color: #3C3C3D;
+    letter-spacing: 0;
+    margin-top: 45px;
+    margin-bottom: 15px;
+
+    @media screen and (min-width: 40em) {
+      text-transform: uppercase;
+      font-size: 16px;
+    }
+  }
+}
+
 #your-market {
   h2 {
     margin-bottom: 30px;
+    text-align: left;
+
+    @media screen and (min-width: 40em) {
+
+    }
   }
 }
 

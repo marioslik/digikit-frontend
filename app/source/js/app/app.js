@@ -27,6 +27,13 @@ $(function() {
           ;
         }
 
+        var $panels = $('#compare-property').find('.panel');
+        var $sliders = [];
+
+        $('.mobile-slider').each(function (i) {
+            $sliders[i] = $(this).bxSlider(bxConfig);
+        });
+
 
 
         $(window).on('scroll', function() {
@@ -150,7 +157,7 @@ $(function() {
     //control video height
 
     function videoHeight(){
-      $('#videos .flexcontainer').height($('.video-container iframe').height() + 20);
+      $('#videos .flexcontainer').height($('.video-container iframe').height() + 0);
     }
 
     videoHeight();
@@ -219,6 +226,7 @@ $(function() {
     resourcesTween = new TimelineMax();
     resourcesTween.from('#resources h2', 1, { ease:Power1.easeInOut, x:-100, alpha:0 })
                .staggerFrom('#resources .icon-card', 1, { ease:Power1.easeInOut, y:75, alpha:0 }, 0.15, "-=1")
+               .from('#resources .card-container', 1, { ease:Power1.easeInOut, boxShadow: "0 0 0 0 rgba(0, 0, 0, 0)" }, "-=1")
     ;
 
     scene3 = new ScrollMagic.Scene({
@@ -291,6 +299,7 @@ $(function() {
     processTween.from('#the-process h2', 1, { ease:Power1.easeInOut, x:-100, alpha:0 })
                 .from('#the-process-nav', 1, { ease:Power1.easeInOut, x:100, alpha:0 }, "-=1")
                .staggerFrom('#the-process .panel .icon-card', 1, { ease:Power1.easeInOut, y:75, alpha:0 }, 0.15, "-=1")
+               .from('#the-process .card-container', 1, { ease:Power1.easeInOut, boxShadow: "0 0 0 0 rgba(0, 0, 0, 0)" }, "-=1")
     ;
 
     scene7 = new ScrollMagic.Scene({
@@ -324,7 +333,9 @@ $(function() {
     /* Compare your property panels */
 
     $('#compare-property-nav ul li').click(function() {
+
         var panelId = $(this).attr('data-tab');
+        var $current = $("#" + panelId);
 
         TweenMax.to($('#compare-property-nav ul li a'), 0.4, {
             ease: Power1.easeInOut,
@@ -356,7 +367,23 @@ $(function() {
             .to($("#" + panelId), 0.25, {
                 ease: Power1.easeInOut,
                 autoAlpha: 1
-            });
+            })
+
+            ;
+
+            $current.toggleClass('active');
+              // check if panel is active
+              if ($current.hasClass('active')) {
+                // get the position of the current panel among his siblings
+                var index = $panels.index($current);
+                // reload slider at the given position
+
+                //$current.bxSlider(bxConfig);
+                $panels[index].reloadSlider();
+              }
+
+
+
     });
 
     /* Suburb Profile Panels and Charts */
@@ -365,6 +392,16 @@ $(function() {
 
 
         var panelId = $(this).attr('data-tab');
+
+        function checkSuburbProfile() {
+
+          if(panelId == "profile-chart-houses") {
+            drawChart();
+          } else if (panelId == "profile-chart-units") {
+            drawChartUnits();
+            console.log('units');
+          }
+        }
 
 
         TweenMax.to($('#suburb-profile-nav ul li a'), 0.4, {
@@ -397,7 +434,9 @@ $(function() {
             .to($("#" + panelId), 0.25, {
                 ease: Power1.easeInOut,
                 autoAlpha: 1
-            });
+            })
+            .call(checkSuburbProfile, [], "-=0")
+            ;
     });
 
     /* Convert chart values to currency */
@@ -562,7 +601,15 @@ $(function() {
       }
     };
 
-    medianPriceUnits = new Chart(ctx2).Line(medianPriceDataUnits, options2);
+    var suburbProfilePanel = $('#suburb-profile-nav ul li').attr('data-tab');
+
+    function drawChartUnits(){
+      medianPriceUnits = new Chart(ctx2).Line(medianPriceDataUnits, options2);
+    }
+
+
+
+    //medianPriceUnits = new Chart(ctx2).Line(medianPriceDataUnits, options2);
 
 
     /* The proecss panels */
@@ -622,6 +669,73 @@ $(function() {
     });
 
 
+    /* Slider on mobile sizes */
+
+    var salesSlider = $('#raine-and-horne-sales');
+    var marketSalesSlider = $('#market-sales');
+    var marketListings = $('#current-listings');
+
+    function addSalesSlider() {
+      salesSlider.bxSlider({
+        minSlides: 1,
+        maxSlides: 2,
+        slideMargin: 10
+      });
+    }
+
+    function addMarketSalesSlider() {
+      marketSalesSlider.bxSlider({
+        minSlides: 1,
+        maxSlides: 2,
+        slideMargin: 10
+      });
+    }
+
+    function addMarketListingsSlider() {
+      marketListings.bxSlider({
+        minSlides: 1,
+        maxSlides: 2,
+        slideMargin: 10
+      });
+    }
+
+    var bxConfig = {
+      minSlides: 1,
+      maxSlides: 2,
+      slideMargin: 10
+    };
+
+
+
+    var checkSize = function() {
+
+    if (window.matchMedia('(max-width: 39.99999999em)').matches) {
+      $('.icon-card .modal-link').html('<img src="img/icons/arrow-head.svg" />');
+    } else if (window.matchMedia('(min-width: 40em)').matches) {
+      $('.icon-card .modal-link').html('More');
+    }
+
+
+    if (window.matchMedia('(max-width: 768px)').matches) {
+
+      salesSlider.addClass("mobile-slider");
+      marketSalesSlider.addClass("mobile-slider");
+      marketListings.addClass("mobile-slider");
+
+      $('.mobile-slider.active').bxSlider(bxConfig);
+
+
+    } else {
+      salesSlider.removeClass("mobile-slider");
+      marketSalesSlider.removeClass("mobile-slider");
+      marketListings.removeClass("mobile-slider");
+      }
+    };
+
+    // Set the function to resize
+    $(window).resize(checkSize);
+    // Call the function
+    checkSize();
 
 
 

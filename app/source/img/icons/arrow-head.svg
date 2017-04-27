@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="9px" height="14px" viewBox="0 0 9 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>Arrow/Short</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Desktop-/-Mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Mobile/Design" transform="translate(-320.000000, -3188.000000)" stroke="#FCB718">
+            <g id="Resources" transform="translate(0.000000, 3051.000000)">
+                <g id="Mobile/Card" transform="translate(20.000000, 94.000000)">
+                    <g id="Card">
+                        <g id="Arrow/Short" transform="translate(300.000000, 43.000000)">
+                            <g id="Arrow" transform="translate(1.000000, 0.000000)">
+                                <polyline id="Stroke-367" points="0 0 7 7 0 14"></polyline>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
