@@ -431,7 +431,7 @@ section {
         width: 35%;
     }
     @media screen and (min-width: 1600px) {
-        width: 32%;
+        width: 31%;
     }
     @media screen and (min-width: 1800px) {
         width: 28%;
@@ -979,6 +979,10 @@ section {
   }
 }
 
+#compare-property .panels {
+  position: relative;
+}
+
 #suburb-profile .row {
   @include clearfix;
   position: relative;
@@ -1044,6 +1048,7 @@ section {
 
 .panel.current {
   display: block;
+  height: 100%;
   opacity: 1;
 }
 

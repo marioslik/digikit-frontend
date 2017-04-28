@@ -5277,7 +5277,7 @@ section {
       width: 35%; } }
   @media screen and (min-width: 1600px) {
     .agent-photo {
-      width: 32%; } }
+      width: 31%; } }
   @media screen and (min-width: 1800px) {
     .agent-photo {
       width: 28%; } }
@@ -5724,6 +5724,9 @@ section {
   #compare-property .panels, #suburb-profile .panels {
     margin-top: 45px; } }
 
+#compare-property .panels {
+  position: relative; }
+
 #suburb-profile .row {
   position: relative; }
   #suburb-profile .row:after {
@@ -5784,6 +5787,7 @@ section {
 
 .panel.current {
   display: block;
+  height: 100%;
   opacity: 1; }
 
 .card {

@@ -1,6 +1,18 @@
 $(function() {
     console.log('app started');
 
+    if($('#market-sales').hasClass("mobile-slider")){
+      $('#market-sales.mobile-slider.current #market-sales-wrapper').bxSlider({
+        minSlides: 1,
+        maxSlides: 2,
+        slideMargin: 10
+      });
+    }
+
+    addComparisonSlider();
+    addMarketSalesSlider();
+    addMarketListingsSlider();
+
     /* Nav - animated scroll on click */
 
     var wrapper = $("#wrapper"),
@@ -9,6 +21,13 @@ $(function() {
         $window = $(window),
         sections = $('section'),
         nav = $('nav');
+
+
+    var bxConfig = {
+      minSlides: 1,
+      maxSlides: 2,
+      slideMargin: 10
+    };
 
         /* Hero section animation on load */
 
@@ -26,15 +45,6 @@ $(function() {
 
           ;
         }
-
-        var $panels = $('#compare-property').find('.panel');
-        var $sliders = [];
-
-        $('.mobile-slider').each(function (i) {
-            $sliders[i] = $(this).bxSlider(bxConfig);
-        });
-
-
 
         $(window).on('scroll', function() {
             var cur_pos = $(this).scrollTop();
@@ -262,6 +272,7 @@ $(function() {
     compareTween.from('#compare-property h2', 1, { ease:Power1.easeInOut, x:-100, alpha:0 })
                 .from('#compare-property-nav', 1, { ease:Power1.easeInOut, x:100, alpha:0 }, "-=1")
                .staggerFrom('#compare-property .panels .panel .card', 1, { ease:Power1.easeInOut, y:75, alpha:0 }, 0.15, "-=1")
+               .call(addComparisonSlider, [], this, "")
     ;
 
     scene5 = new ScrollMagic.Scene({
@@ -331,10 +342,53 @@ $(function() {
 
     /* Compare your property panels */
 
+    /* Slider on mobile sizes */
+
+    var salesSlider;
+    var marketSalesSlider;
+    var marketListingsSlider;
+
+    function addSalesSlider() {
+      salesSlider = $('#raine-and-horne-sales.mobile-slider.current #raine-and-horne-sales-wrapper').bxSlider({
+        minSlides: 1,
+        maxSlides: 2,
+        slideMargin: 10
+      });
+    }
+
+    function addMarketSalesSlider() {
+      marketSalesSlider = $('#market-sales.mobile-slider.current #market-sales-wrapper').bxSlider({
+        minSlides: 1,
+        maxSlides: 2,
+        slideMargin: 10
+      });
+    }
+
+    function addMarketListingsSlider() {
+      marketListingsSlider = $('#current-listings.mobile-slider.current #current-listings-wrapper').bxSlider({
+        minSlides: 1,
+        maxSlides: 2,
+        slideMargin: 10
+      });
+    }
+
+    function addComparisonSlider() {
+      if($("#market-sales.mobile-slider").hasClass('current')) {
+        addMarketSalesSlider();
+      } else if ($("#current-listings.mobile-slider").hasClass('current')) {
+        addMarketListingsSlider();
+      } else if($("#raine-and-horne-sales.mobile-slider").hasClass('current')) {
+        addSalesSlider();
+      }
+    }
+
     $('#compare-property-nav ul li').click(function() {
+        addComparisonSlider();
 
         var panelId = $(this).attr('data-tab');
         var $current = $("#" + panelId);
+        var tabId = $('#compare-property .panels div').attr('id');
+
 
         TweenMax.to($('#compare-property-nav ul li a'), 0.4, {
             ease: Power1.easeInOut,
@@ -349,37 +403,33 @@ $(function() {
             scaleX: 1
         });
 
+
         var panelsTl = new TimelineMax();
 
         panelsTl
             .to('#compare-property .panel', 0.5, {
                 ease: Power1.easeInOut,
-                autoAlpha: 0
+                autoAlpha: 0,
+                className: "-=current"
             })
             .set('#compare-property .panel', {
                 display: 'none',
                 delay: 0.1
             })
             .set($("#" + panelId), {
-                display: 'block'
+                display: 'block',
+                height: '100%',
+                autoAlpha: 0
             })
             .to($("#" + panelId), 0.25, {
                 ease: Power1.easeInOut,
-                autoAlpha: 1
+                autoAlpha: 1,
+                className: "+=current"
             })
+            .call(addComparisonSlider, [], this, "")
 
             ;
 
-            $current.toggleClass('active');
-              // check if panel is active
-              if ($current.hasClass('active')) {
-                // get the position of the current panel among his siblings
-                var index = $panels.index($current);
-                // reload slider at the given position
-
-                //$current.bxSlider(bxConfig);
-                $panels[index].reloadSlider();
-              }
 
 
 
@@ -668,67 +718,28 @@ $(function() {
     });
 
 
-    /* Slider on mobile sizes */
-
-    var salesSlider = $('#raine-and-horne-sales');
-    var marketSalesSlider = $('#market-sales');
-    var marketListings = $('#current-listings');
-
-    function addSalesSlider() {
-      salesSlider.bxSlider({
-        minSlides: 1,
-        maxSlides: 2,
-        slideMargin: 10
-      });
-    }
-
-    function addMarketSalesSlider() {
-      marketSalesSlider.bxSlider({
-        minSlides: 1,
-        maxSlides: 2,
-        slideMargin: 10
-      });
-    }
-
-    function addMarketListingsSlider() {
-      marketListings.bxSlider({
-        minSlides: 1,
-        maxSlides: 2,
-        slideMargin: 10
-      });
-    }
-
-    var bxConfig = {
-      minSlides: 1,
-      maxSlides: 2,
-      slideMargin: 10
-    };
 
 
 
     var checkSize = function() {
 
-    if (window.matchMedia('(max-width: 39.99999999em)').matches) {
-      $('.icon-card .modal-link').html('<img src="img/icons/arrow-head.svg" />');
-    } else if (window.matchMedia('(min-width: 40em)').matches) {
-      $('.icon-card .modal-link').html('More');
-    }
+        if (window.matchMedia('(max-width: 39.99999999em)').matches) {
+          $('.icon-card .modal-link').html('<img src="img/icons/arrow-head.svg" />');
+        } else if (window.matchMedia('(min-width: 40em)').matches) {
+          $('.icon-card .modal-link').html('More');
+        }
 
+        if (window.matchMedia('(max-width: 768px)').matches) {
 
-    if (window.matchMedia('(max-width: 768px)').matches) {
+          $('#raine-and-horne-sales').addClass("mobile-slider");
+          $('#market-sales').addClass("mobile-slider");
+          $('#current-listings').addClass("mobile-slider");
 
-      salesSlider.addClass("mobile-slider");
-      marketSalesSlider.addClass("mobile-slider");
-      marketListings.addClass("mobile-slider");
-
-      $('.mobile-slider.active').bxSlider(bxConfig);
-
-
-    } else {
-      salesSlider.removeClass("mobile-slider");
-      marketSalesSlider.removeClass("mobile-slider");
-      marketListings.removeClass("mobile-slider");
-      }
+        } else {
+          $('#raine-and-horne-sales').removeClass("mobile-slider");
+          $('#market-sales').removeClass("mobile-slider");
+          $('#current-listings').removeClass("mobile-slider");
+          }
     };
 
     // Set the function to resize
